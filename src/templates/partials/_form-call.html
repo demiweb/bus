@@ -1,0 +1,22 @@
+<!-- begin form -->
+<div class="form form--call">
+  <form>
+    <div class="form__row">
+      {{ mixins.input(
+        name = 'input',
+        mod = 'input--white',
+        type = 'tel',
+        placeholder = '+38 ( _ _ _ ) _ _ _ - _ _ - _ _',
+        value = '',
+        fieldClass = ''
+      ) }}
+
+      {{ mixins.btn(
+        title = 'Оставить заявку',
+        mod = '',
+        href = false
+      ) }}
+    </div>
+  </form>
+</div>
+<!-- end form -->

@@ -1,5 +1,102 @@
 <!-- begin footer -->
 <footer class="footer">
-  hello from footer
+ <div class="container">
+   <div class="row">
+     <div class="col-xl-4">
+       <div class="footer__logo">
+         <a href="/" class="logo"><img class="js-lazy" alt="" src="" data-src="./img/logo-white.png"/></a>
+       </div>
+
+       <div class="footer__text">Компания CEI занимается переоборудованием
+        микроавтобусов в Бердичеве с 1996 года и за это 
+        время мы заработали репутацию лучших в своем 
+      деле и продолжаем совершенствоваться ежедневно.</div>
+
+      <div class="footer__text">
+        Принимаем к оплате:
+        <img class="js-lazy" alt="" src="" width="47" data-src="./img/visa.svg"/>
+        <img class="js-lazy" alt="" src="" width="47" data-src="./img/mastercard.svg"/>
+      </div>
+    </div>
+
+     <div class="col-xl-3 col-lg-4 col-sm-6">
+       <div class="footer__block">
+         <div class="footer__title">
+           <h5 class="title title--h5 title--white">услуги</h5>
+         </div>
+
+         <div class="footer__nav">
+           {{ mixins.list(
+             name = 'nav',
+             modifications = { wrap: 'nav--footer', item: '', link: '' },
+             list = [
+              { link: 'Кузовные работы' },
+              { link: 'Автомобильные кондиционеры' },
+              { link: 'Шумо-Виброизоляция салона' },
+              { link: 'Установка диванов и сидений' },
+              { link: 'Аварийные люки и шторки' },
+              { link: 'Электрооборудование' },
+              { link: 'Оформление документов' },
+              { link: 'Продажа комплектующих' }
+             ]
+           ) }}
+         </div>
+       </div>
+     </div>
+
+     <div class="col-xl-2 col-lg-4 col-sm-6">
+       <div class="footer__block">
+         <div class="footer__title">
+           <h5 class="title title--h5 title--white">Клиентам</h5>
+         </div>
+
+         <div class="footer__nav">
+           {{ mixins.list(
+             name = 'nav',
+             modifications = { wrap: 'nav--footer', item: '', link: '' },
+             list = [
+              { link: 'Примеры работ' },
+              { link: 'О нас' },
+              { link: 'Новости' },
+              { link: 'Контакты' },
+              { link: 'Заказать услугу' }
+             ]
+           ) }}
+         </div>
+       </div>
+     </div>
+
+     <div class="col-xl-3 col-lg-4 col-sm-6">
+       <div class="footer__block">
+         <div class="footer__title">
+           <h5 class="title title--h5 title--white">график работы</h5>
+         </div>
+
+         <div class="footer__nav">
+           {{ mixins.list(
+             name = 'nav',
+             modifications = { wrap: 'nav--footer nav--under', item: '', link: '' },
+             list = [
+              { item: '<span>Понедельник</span><span>9:00 - 17:00</span>' },
+              { item: '<span>Вторник</span><span>9:00 - 17:00</span>' },
+              { item: '<span>Среда</span><span>9:00 - 17:00</span>' },
+              { item: '<span>Четверг</span><span>9:00 - 17:00</span>' },
+              { item: '<span>Пятница</span><span>9:00 - 17:00</span>' },
+              { item: '<span>Суббота</span><span>Выходной</span>' },
+              { item: '<span>Воскресенье</span><span>Выходной</span>' }
+             ]
+           ) }}
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <div class="footer__auth">
+     <div class="footer__auth-icon">
+       {{ mixins.icon('D') }}
+     </div>
+     <div class="footer__auth-title">Сайт разработан <a href="#">Demiweb International</a></div>
+   </div>
+ </div>
 </footer>
 <!-- end footer -->

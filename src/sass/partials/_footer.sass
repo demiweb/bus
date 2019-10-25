@@ -1,0 +1,57 @@
+.footer
+  background-color: $c-title
+  padding-top: 110px
+  +xl
+    padding-top: 80px
+  +lg
+    padding-top: 60px
+  +md
+    padding-top: 50px
+  +sm
+    padding-top: 30px
+  &__auth
+    margin-top: 80px
+    +flex(center, center)
+    font-size: em(13)
+    a
+      color: $white
+      text-decoration: underline
+    +xl
+      margin-top: 60px
+    +lg
+      margin-top: 50px
+    +md
+      margin-top: 40px
+    +sm
+      margin-top: 30px
+  &__auth-icon
+    +flex(center, center)
+    color: $white
+    background-color: $black
+    width: 40px
+    height: 40px
+    margin-right: .7em
+    .icon
+      font-size: 20px
+  &__title
+    margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  &__logo
+    margin-bottom: 15px
+  &__text
+    margin-bottom: 40px
+    // max-width: 350px
+    img
+      display: inline-block
+      vertical-align: middle
+      margin-left: 5px
+      margin-right: 5px
+      margin-top: -.2em
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  &__block
+    +md
+      margin-bottom: 30px

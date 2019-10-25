@@ -1,0 +1,184 @@
+.header
+  $this: &
+  position: relative
+  z-index: 10
+  +lg
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+  &.is-fixed
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    #{$this}__top
+      display: none
+  &__top
+    background-color: $white
+    #{$this}__inner
+      height: $header-top-height
+      justify-content: flex-start
+      padding-top: 5px
+      padding-bottom: 5px
+      +xll
+        height: $header-top-height-xll
+      +lg
+        height: $header-top-height-lg
+        box-shadow: 0 0 10px rgba($black, .2)
+      +sm
+        height: $header-top-height-sm
+  &__bottom
+    background-color: $c-title
+    +lg
+      position: fixed
+      z-index: 10
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      overflow: auto
+      padding-top: 40px
+      padding-bottom: 40px
+      text-align: center
+      +ready
+        +tr(opacity .3s, visibility .3s)
+      +vertical
+      +hidden
+      .container
+        display: inline-block
+        vertical-align: middle
+        font-size: $fz
+        width: 100%
+        +sm
+          font-size: $fz-sm-px
+      &.is-active
+        +visible
+    #{$this}__inner
+      height: $header-bottom-height
+      justify-content: center
+      +xll
+        height: $header-bottom-height-xll
+      +lg
+        height: auto
+        display: block
+        margin-left: 0
+        margin-right: 0
+  &__inner
+    @extend .row
+    align-items: center    
+  &__contacts
+    @extend .col-xl-5
+    +flex(space-between, center)
+    +lg
+      max-width: none
+      flex: 1 0 auto
+      width: auto
+    +sm
+      justify-content: flex-end
+    +xs
+      padding-left: 0
+      padding-right: 0
+  &__logo
+    @extend .col-xl-2
+    +lg
+      max-width: none
+      flex: 0 0 auto
+      width: auto
+    +xs
+      padding-right: 0
+  &__btn
+    @extend .col-4
+    text-align: center
+    +lg
+      display: none
+  &__btn-mob
+    display: none
+    +lg
+      display: block
+  &__work-hrs
+    @extend .col-1
+    +lg
+      display: none
+  &__nav
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  &__nav-in
+  &__burger
+    text-align: right
+    display: none
+    padding-left: 15px
+    padding-right: 15px
+    +lg
+      display: block
+    +xs
+      padding-left: 10px
+  &__close
+    +icon-close(20, 2, currentColor)
+    position: absolute
+    top: 15px
+    right: 15px
+    z-index: 1
+    display: none
+    +tr(color .3s)
+    +hover
+      color: $accent
+    +lg
+      display: block
+
+
+
+.header-contacts
+  position: relative
+  color: $c-title
+  padding-left: 20px
+  &__icon
+    position: absolute
+    z-index: 1
+    top: 50%
+    transform: translate(0, -50%)
+    left: 0
+    .icon
+      font-size: 1.1em
+  &__content
+    a
+      +tr(color .3s)
+      +hover
+        color: $accent
+
+.work-hrs
+  font-size: $fz-xs
+  &__icon
+    .icon
+      font-size: 1.3em
+
+.burger 
+  display: inline-block
+  width: 28px
+  height: 28px
+  // margin-top: -24px
+  position: relative
+  +tr(color .3s)
+  +hover
+    color: $accent
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+  span:after
+    top: 5px
+  span:before
+    bottom: 5px
+  span 
+    // position: relative
+    display: block
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: currentColor
+    
+    backface-visibility: hidden
+    border-radius: 2px
+

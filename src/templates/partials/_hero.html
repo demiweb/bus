@@ -1,5 +1,61 @@
 <!-- begin hero -->
-<section class="hero">
-  <h1>hello from hero</h1>
+<section class="hero{% if hero.bg %} js-lazy{% endif %}" {% if hero.bg %}data-background-image="./img/hero/{{ hero.bg }}"{% endif %}>
+{% if page === 'home' %}
+   <!-- begin slider -->
+   <div class="slider__wrap slider--hero__wrap">
+     <div class="slider slider--hero js-slider" data-slider="hero">
+       {% for i in range(0, 3) %}
+       <!-- begin slide -->
+       <div class="slide js-lazy" data-background-image="./img/hero/bg-hero-home-01.jpg">
+         <div class="container">
+           <div class="hero__inner">
+             <div class="row">
+               <div class="col-lg-5 col-md-8 offset-lg-1 offset-md-1">
+                 <div class="hero__content">
+                   <div class="hero__title">
+                     <h1 class="title title--h2-md title--white">Переоборудование <small>микроавтобусов</small></h1>
+                   </div>
+
+                   <div class="hero__subttl h2-subttl">в Бердичеве за <span class="accent">1 день</span></div>
+
+                   <div class="hero__text">Если Вы решили модернизировать свой автомобиль, сделать его 
+                    более современным и переоборудовать по своиму вкусу — вам 
+                  просто необходимо довериться профессионалам из «Cei»</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end slide -->
+      {% endfor %}
+    </div>
+
+    <div class="slider__controls">
+     <button class="slider__prev prev js-slider-prev"></button>
+     <button class="slider__next next js-slider-next"></button>
+   </div>
+  </div>
+  <!-- end slider -->
+{% else %}
+
+  {% if hero.breadcrumbs %}
+    <div class="hero__breadcrumbs">
+      {{ mixins.list(
+        name = 'breadcrumbs',
+        modifications = { wrap: hero.breadcrumbs.mod, item: '', link: '' },
+        list = hero.breadcrumbs.list
+      ) }}
+    </div>
+  {% endif %}
+  
+  {% if hero.title %}
+    <div class="hero__title">
+      <h1 class="title title--h2title--white">{{ hero.title }}</h1>
+    </div>
+  {% endif %}
+
+
+{% endif %}
 </section>
 <!-- end hero -->

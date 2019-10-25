@@ -1,0 +1,61 @@
+.nav
+  color: $white
+  text-transform: uppercase
+  font-weight: 600
+  font-size: $fz-sm
+  li
+    display: inline-block
+    margin-left: 45px
+    margin-right: 45px
+    +lg
+      margin-left: 0
+      margin-right: 0
+      display: block
+      +notlast
+        margin-bottom: 15px
+  a
+    +flex(center, center)
+    padding-top: .5em
+    padding-bottom: .5em
+    border-bottom: 4px solid transparent
+    height: $header-bottom-height - 4px
+    +tr(color .3s, border-color .3s)
+    +xll
+      height: $header-bottom-height-xll - 4px
+    +hover
+      border-bottom-color: $white
+      color: $gray-light
+    +lg
+      display: inline
+      padding: 0
+      border: 0
+    &.is-active
+      border-bottom-color: $white
+      color: $gray-light
+
+  &--footer
+    color: $gray
+    text-transform: none
+    font-weight: 400
+    font-size: 1em
+    li
+      display: block
+      margin-left: 0
+      margin-right: 0
+      +notlast
+        margin-bottom: 15px
+        +md
+          margin-bottom: 10px
+    a
+      display: inline
+      padding: 0
+      border-bottom: 0
+      +hover
+        color: $c-text
+  &--under
+    li
+      border-bottom: 1px dashed currentColor
+      +flex(space-between)
+      +lg
+        display: flex
+

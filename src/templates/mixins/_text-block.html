@@ -1,0 +1,20 @@
+{% macro textBlock(mod, title, texts, upttl) %}
+<!-- begin text-block -->
+<div class="text-block {% if mod %} {{ mod }}{% endif %}">
+  {% if upttl %}
+  <div class="text-block__upttl{% if upttl.mod %} {{ upttl.mod }}{% endif %}">{{ upttl.title | safe }}</div>
+  {% endif %}
+  {% if title %}
+  <div class="text-block__title">
+    <h2 class="title{% if title.mod %} {{ title.mod }}{% else %} title--h2{% endif %}">{{ title.title | safe }}</h2>
+  </div>
+  {% endif %}
+
+  {% if texts %}
+    {% for i in texts %}
+    <div class="text-block__text {% if i.mod %} {{ i.mod }}{% endif %}">{{ i.text | safe }}</div>
+    {% endfor %}
+  {% endif %}
+</div>
+<!-- end text-block -->
+{% endmacro %}

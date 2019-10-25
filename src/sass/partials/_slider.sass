@@ -1,0 +1,54 @@
+.prev, .next
+  +inline-flex(center, center)
+  width: 42px
+  height: 42px
+  border-radius: 50%
+  background-color: $white
+  color: $c-title
+  position: relative
+  +before
+    +icon-arrow(.6, .6, .06, currentColor, 45, em)
+    display: block
+    margin-left: .3em
+
+.next
+  transform: scaleX(-1)
+
+.slider
+  &__wrap
+    position: relative
+  &__controls
+    @extend .container
+    width: 100%
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    height: 0
+    z-index: 2
+    +flex(space-between, center)
+
+  &--hero
+    .slide
+      +cover
+    &__wrap
+      button[data-action]
+        display: none
+      .tns-nav
+        position: absolute
+        z-index: 1
+        bottom: 20px
+        left: 0
+        width: 100%
+        text-align: center
+        button
+          display: inline-block
+          margin-right: 5px
+          margin-left: 5px
+          width: 10px
+          height: 10px
+          background-color: $gray
+          border-radius: 50%
+          &.tns-nav-active
+            background-color: $accent
+    

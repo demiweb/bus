@@ -5,4 +5,33 @@ h1, h2, h3, h4, h5, h6
   font-weight: 400
 
 .title
-  +css-lock(21, 45, 320, 1399, font-size)
+  line-height: 1
+  color: $c-title
+  font-weight: 800
+  text-transform: uppercase
+  display: block
+  small
+    font-size: em(34, 40)
+    font-weight: 400
+  &--h2
+    +css-lock(21, 42, 320, 1399, font-size)
+  &--h2-md
+    +css-lock(21, 40, 320, 1399, font-size)
+  &--h3
+    +css-lock(18, 24, 320, 1399, font-size)
+  &--h5
+    font-size: 1em !important
+    font-weight: 700
+  &--white
+    color: $white
+  &--ttn
+    text-transform: none
+
+.h2-subttl
+  text-transform: uppercase
+  font-weight: 600
+  +css-lock(16, 21, 320, 1399, font-size)
+
+.text
+  &--white
+    color: $white

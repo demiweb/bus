@@ -1,0 +1,56 @@
+{%set
+features = [
+  {
+    mod: 'feature--sm',
+    icon: 'security-on',
+    title: { title: 'Гарантия' },
+    text: '12 месяцев'
+  },
+  {
+    mod: 'feature--sm',
+    icon: 'tag',
+    title: { title: 'самые Низкие' },
+    text: 'цены в городе'
+  },
+  {
+    mod: 'feature--sm',
+    icon: '24-hours-symbol',
+    title: { title: 'Установка' },
+    text: 'от 24 часов'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--sm s-order js-lazy" data-background-image="./img/bg-order.jpg">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-xl-5 col-lg-7">
+        {{ mixins.textBlock(
+          mod = 's-order__text-block',
+          title = { title: 'Готовы заказать <small>переоборудование?</small>', mod: 'title--h2-md' },
+          texts = [
+            {
+              text: 'Оставляйте ваши данные в форме и наш менеджер свяжется с вами в ближайшее время для уточнения всех деталей.'
+            }
+          ]
+        ) }}
+
+        <!-- begin features -->
+        <div class="features features--sm s-order__features">
+          {% for i in features %}
+          <div class="features__item">
+            {% include "partials/_feature.html" %}
+          </div>
+          {% endfor %}
+        </div>
+        <!-- end features -->
+      </div>
+
+      <div class="col-xl-4 col-lg-5 offset-xl-2">
+        {% include "partials/_form.html" %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

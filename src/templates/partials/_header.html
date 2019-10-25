@@ -1,5 +1,92 @@
 <!-- begin header -->
 <header class="header">
-  hello from header
+  <div class="header__top">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href="/" class="logo">
+            <img class="js-lazy" alt="" src="" data-src="./img/logo.png"/>
+          </a>
+        </div>
+
+        <div class="header__contacts">
+          <div class="header__contact-block is-hidden-sm">
+            <!-- begin header-contacts -->
+            <div class="header-contacts">
+              <div class="header-contacts__icon">
+                {{ mixins.icon('placeholder') }}
+              </div>
+
+              <div class="header-contacts__content">
+                Бердичев ул. Короленко 41Т
+              </div>
+            </div>
+            <!-- end header-contacts -->
+          </div>
+
+          <div class="header__contact-block">
+            <!-- begin header-contacts -->
+            <div class="header-contacts">
+              <div class="header-contacts__icon">
+                {{ mixins.icon('phone-call') }}
+              </div>
+
+              <div class="header-contacts__content">
+                <p><a href="tel:+380734060404">+38 (073) 406 04 04</a></p>
+                <p><a href="tel:+380964060404">+38 (096) 406 04 04</a></p>
+              </div>
+            </div>
+            <!-- end header-contacts -->
+          </div>
+        </div>
+
+        <div class="header__btn">
+          {{ mixins.btn(
+            title = 'Заказать звонок',
+            mod = '',
+            href = false
+          ) }}
+        </div>
+
+        <div class="header__work-hrs">
+          <!-- begin work-hrs -->
+          <div class="work-hrs">
+            <div class="work-hrs__icon">
+              {{ mixins.icon('clock-2') }}
+            </div>
+
+            <div class="work-hrs__content">
+              <p>Пн - Пт</p>
+              <p>9:00 - 17:00</p>
+            </div>
+          </div>
+          <!-- end work-hrs -->
+        </div>
+
+        <div class="header__burger">
+          <button class="burger js-burger"><span></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header__bottom js-menu">
+    <button class="header__close js-menu-close"></button>
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__nav">
+            {% include "partials/_nav.html" %}
+        </div>
+
+        <div class="header__btn-mob">
+          {{ mixins.btn(
+            title = 'Заказать звонок',
+            mod = '',
+            href = false
+          ) }}
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
 <!-- end header -->

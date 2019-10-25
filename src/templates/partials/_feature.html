@@ -1,0 +1,15 @@
+<!-- begin feature -->
+<div class="feature{% if i.mod %} {{ i.mod }}{% endif %}">
+  <div class="feature__icon">
+    {{ mixins.icon(i.icon) }}
+  </div>
+
+  <div class="feature__content">
+    <div class="feature__title">
+      <h5 class="title title--h5{% if i.title.mod %} {{ i.title.mod }}{% endif %}">{{ i.title.title | safe }}</h5>
+    </div>
+
+    <div class="feature__text">{{ i.text | safe }}</div>
+  </div>
+</div>
+<!-- end feature -->

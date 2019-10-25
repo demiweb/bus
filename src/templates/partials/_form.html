@@ -1,0 +1,67 @@
+{%set
+form = {
+  title: 'Оставить заявку <br> <small>на переоборудование</small>',
+  fields: [
+    {
+      name: 'input',
+      mod: '',
+      type: 'text',
+      placeholder: 'Имя',
+      fieldClass: '',
+      label: {}
+    },
+    {
+      name: 'input',
+      mod: '',
+      type: 'tel',
+      placeholder: '+38 ( _ _ _ ) _ _ _ - _ _ - _ _',
+      fieldClass: '',
+      label: {}
+    },
+    {
+      name: 'checkbox',
+      mod: '',
+      type: 'checkbox',
+      placeholder: '',
+      fieldClass: '',
+      label: { last: { span: true, title: 'Я согласен на обработку персональных данных' } },
+      fieldAttributes: { checked: '' }
+    }
+  ]
+}
+%}
+
+<!-- begin form -->
+<div class="form">
+  <form>
+    {% if form.title %}
+    <div class="form__title">
+      <h3 class="title title--h3">{{ form.title | safe }}</h3>
+    </div>
+    {% endif %}
+
+    {% for i in form.fields %}
+    <div class="form__field">
+      {{ mixins.input(
+        name = i.name,
+        mod = i.mod,
+        type = i.type,
+        placeholder = i.placeholder,
+        value = '',
+        fieldClass = i.fieldClass,
+        label = i.label,
+        fieldAttributes = i.fieldAttributes
+      ) }}
+    </div>
+    {% endfor %}
+
+    <div class="form__field form__btn">
+      {{ mixins.btn(
+        title = 'Оставить заявку',
+        mod = 'btn--full',
+        href = false
+      ) }}
+    </div>
+  </form>
+</div>
+<!-- end form -->

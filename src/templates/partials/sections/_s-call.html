@@ -1,0 +1,23 @@
+<!-- begin section -->
+<section class="section js-lazy" data-background-image="./img/bg-call.jpg">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-8">
+        {{ mixins.textBlock(
+          upttl = { mod: 'tag', title: 'Свяжитесь с нами' },
+          title = { title: 'Уже готовы переоборудовать свой микроавтобус?', mod: 'title--h2 title--white'},
+          texts = [
+            {
+              text: 'Оставьте ваш телефон и наш менеджер <br>
+              свяжется с вами в ближайшее время',
+              mod: 'text--white'
+            }
+          ]
+        ) }}
+
+        {% include "partials/_form-call.html" %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

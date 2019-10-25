@@ -1,0 +1,102 @@
+.form
+  &:not(.form--call)
+    background-color: $white
+    padding: 60px
+    box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.25)
+    text-align: center
+    +xll
+      padding: 50px
+    +xl
+      padding: 40px
+    +lg
+      padding-left: 30px
+      padding-right: 30px
+    +md
+      padding-left: 20px
+      padding-right: 20px
+    +sm
+      padding-left: 15px
+      padding-right: 15px
+  &__title
+    margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  &__field
+    +notlast
+      margin-bottom: 25px
+      +md
+        margin-bottom: 15px
+  &__row
+    +flex(flex-start, normal, row, wrap)
+  &__btn
+    max-width: 300px
+    margin-left: auto
+    margin-right: auto
+  
+  &--call
+    .input
+      max-width: 400px
+      width: 100%
+      margin-right: 15px
+      +sm
+        max-width: none
+        margin-bottom: 15px
+        margin-right: 0
+    .btn
+      +sm
+        min-width: 0
+        width: 100%
+
+.input
+  input
+    width: 100%
+    background-color: transparent
+    border-bottom: 1px solid  $gray-light
+    height: 35px
+    padding: .3em 0
+    +tr(border-color .3s)
+    &:focus
+      border-color: $accent
+    +placeholder
+      color: $gray-light
+
+  &--white
+    input
+      background-color: $white
+      border: 1px solid $white
+      padding: .8em 1.5em
+      height: 51px
+
+.checkbox
+  position: relative
+  font-size: $fz-xs
+  padding-left: 1.5em
+  user-select: none
+  color: $gray-light
+  input[type="checkbox"]
+    opacity: 0
+    visibility: hidden
+    position: absolute
+    width: 0
+    &:checked + span
+      &::after
+        content: ''
+        border-radius: 50%
+        background-color: $accent
+        height: 7px
+        width: 7px
+        top: 2px
+        left: 4px
+        position: absolute
+        display: block
+  span
+    &::before
+      content: ''
+      width: 15px
+      height: 15px
+      top: -2px
+      left: 0
+      background-color: #eeeeee
+      border-radius: 50%
+      position: absolute
+      display: block

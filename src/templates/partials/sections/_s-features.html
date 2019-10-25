@@ -1,0 +1,50 @@
+{%set
+features = [
+  {
+    icon: 'automobile-with-wrench',
+    title: { title: 'Опытные специалисты', mod: 'title--ttn' },
+    text: 'они знают, как предоставить
+высококлассный сервис'
+  },
+  {
+    icon: 'rearview',
+    title: { title: 'Качественные материалы', mod: 'title--ttn' },
+    text: 'которые прослужат не один
+десяток лет'
+  },
+  {
+    icon: 'clock',
+    title: { title: 'Работаем без задержек', mod: 'title--ttn' },
+    text: 'и всегда укладываемся
+вовремя'
+  },
+  {
+    icon: 'customer-review',
+    title: { title: 'Нам доверяют более 300', mod: 'title--ttn' },
+    text: 'автолюбителей, которые
+всегда возвращаются снова'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section pb-0">
+  <div class="container">
+    <div class="section__title">
+      <h2 class="title title--h2">Почему стоит <span class="accent">выбрать нас</span></h2>
+    </div>
+
+    <!-- begin features -->
+    <div class="features">
+      <div class="row">
+        {% for i in features %}
+        <div class="col-lg-3 col-sm-6">
+          {% include "partials/_feature.html" %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- end features -->
+  </div>
+</section>
+<!-- end section -->
