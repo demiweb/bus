@@ -1,0 +1,30 @@
+---
+title: about
+page: about
+hero: {
+  bg: 'bg-hero-about.jpg',
+  title: 'о нас',
+  breadcrumbs: {
+    list: [
+      { link: 'Главная' },
+      { item: '-' },
+      { link: 'О нас', modLink: 'is-active' }
+    ]
+  }
+}
+sectionAboutText: {
+  pb: true
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-features.html" %}
+  {% include "partials/sections/_s-about-text.html" %}
+  {% include "partials/sections/_s-steps.html" %}
+  {% include "partials/sections/_s-pay.html" %}
+  {% include "partials/sections/_s-faq.html" %}
+  {% include "partials/sections/_s-call.html" %}
+  {% include "partials/sections/_s-gallery.html" %}
+{% endblock %}

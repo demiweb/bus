@@ -1,0 +1,21 @@
+.prices
+  &__block
+    +notlast
+      margin-bottom: 40px
+      +lg
+        margin-bottom: 30px
+      +md
+        margin-bottom: 15px
+
+.prices-block
+  &__title
+    margin-bottom: 1em
+
+.prices-list
+  font-size: $fz-sm
+  li
+    +flex(space-between, center)
+    padding: .7em 0px
+    border-bottom: 1px solid  $gray-light
+    &:first-child
+      border-top: 1px solid  $gray-light

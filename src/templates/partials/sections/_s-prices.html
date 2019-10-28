@@ -1,0 +1,63 @@
+{%set
+prices = [
+  {
+    title: 'Сиденья',
+    list: [
+      { item: '<span>Стандартное</span><span>от 600 грн</span>' },
+      { item: '<span>Трансформер</span><span>от 800 грн</span>' },
+      { item: '<span>Двойное</span><span>от 900 грн</span>' }
+    ]
+  },
+  {
+    title: 'Диваны',
+    list: [
+      { item: '<span>Стандартный</span><span>от 1600 грн</span>' },
+      { item: '<span>Двойной</span><span>от 2600 грн</span>' },
+      { item: '<span>Общий</span><span>от 3600 грн</span>' },
+      { item: '<span>Под заказ</span><span>от 10000 грн</span>' }
+    ]
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-8 offset-lg-3 offset-md-2">
+        <div class="section__title">
+          <h2 class="title title--h2">наши <span class="accent">цены</span></h2>
+          <div class="section__subttl">Цены на наши услуги могут отличаться в зависимости от марки авто, пожеланий клиента по поводу установки, фирм
+          ы, материалов и скорости выполнения.</div>
+        </div>
+
+        <!-- begin prices -->
+        <div class="prices">
+          {% for i in prices %}
+          <div class="prices__block">
+            <!-- begin prices-block -->
+            <div class="prices-block">
+              <div class="prices-block__title">
+                <h5 class="title title--h5 title--accent title--ttn">{{ i.title }}</h5>
+              </div>
+
+              <div class="prices-block__list">
+                {{ mixins.list(
+                  name = 'prices-list',
+                  modifications = { wrap: '', item: '', link: '' },
+                  list = i.list
+                ) }}
+              </div>
+            </div>
+            <!-- end prices-block -->
+          </div>
+          {% endfor %}
+        </div>
+        <!-- end prices -->
+      </div>
+    </div>
+
+
+  </div>
+</section>
+<!-- end section -->

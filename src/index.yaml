@@ -3,3 +3,10 @@ ProjectTitle: bus
 PageList:
 - file: home.html
 - file: works.html
+- file: services.html
+- file: service-one.html
+- file: work-one.html
+- file: about.html
+- file: blog.html
+- file: blog-page.html
+- file: contacts.html

@@ -1,0 +1,42 @@
+---
+title: service-one
+page: service-one
+hero: {
+  bg: 'bg-hero-service-one.jpg',
+  title: 'Установка диванов и сидений',
+  breadcrumbs: {
+    list: [
+      { link: 'Главная' },
+      { item: '-' },      
+      { link: 'Наши услуги', modLink: 'is-active' },
+      { item: '-' },
+      { link: 'Установка диванов и сидений', modLink: 'is-active' }
+    ]
+  }
+}
+sectionGallery: {
+  title: {
+    title: 'примеры <span class="accent">наших работ</span>'
+  }
+}
+sectionAboutText: {
+  title: { hidden: true }
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}  
+  {% include "partials/sections/_s-about-text.html" %}
+  {% include "partials/sections/_s-gallery.html" %}
+  {% include "partials/sections/_s-prices.html" %}
+  {% include "partials/sections/_s-call.html" %}
+
+  {%set
+    sectionAboutText = {
+      pb: true,
+      title: { hidden: true }
+    }
+  %}
+  {% include "partials/sections/_s-about-text.html" %}
+{% endblock %}

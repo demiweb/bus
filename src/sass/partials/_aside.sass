@@ -1,0 +1,43 @@
+.aside  
+  background-color: $white
+  +md
+    width: 300px
+    height: 100%
+    padding: 15px
+    padding-top: 40px
+    overflow: auto
+  &__title
+    margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+
+
+.aside-nav
+  font-size: $fz-sm
+  a
+    display: block
+    padding-top: .4em
+    padding-bottom: .4em
+    border-bottom: 1px solid  $c-text
+    +tr(color .3s)
+    position: relative
+    padding-right: 1em
+    padding-left: 1.1em
+    +after
+      +icon-arrow(.5, .5, .06, currentColor, 225, em)
+      position: absolute
+      top: 50%
+      transform: translate(0, -50%) rotate(225deg)
+      right: 0
+    +before
+      height: calc(100% - .8em)
+      position: absolute
+      top: 50%
+      transform: translate(0, -50%)
+      left: 0
+      background-color: currentColor
+      width: 2px
+    &.is-active
+      color: $accent
+    +hover
+      color: $accent

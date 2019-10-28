@@ -1,0 +1,44 @@
+<!-- begin gallery -->
+<div class="gallery">
+  <div class="gallery__slider">
+    <!-- begin slider -->
+    <div class="slider__wrap slider--gallery__wrap">
+      <div class="swiper-container js-slider" data-slider="gallery">
+        <div class="swiper-wrapper slider slider--gallery js-lightgallery">
+          {% for i in range(0, 3) %}
+          <a
+            href="./img/works/01-lg.jpg"
+            class="swiper-slide slide gallery__img js-lazy"
+            {# data-exthumbimage="./img/works/01-thumb.jpg" #}
+            data-background-image="./img/works/01-lg.jpg">
+            <span class="gallery__img-cover">
+              <span class="gallery__img-icon">{{ mixins.icon('search') }}</span>
+            </span>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="slider__controls">
+        <button class="slider__prev prev js-slider-prev"></button>
+        <button class="slider__next next js-slider-next"></button>
+      </div>
+    </div>
+    <!-- end slider -->
+  </div>
+
+  <div class="gallery__thumbs">
+    <!-- begin slider -->
+    <div class="slider__wrap slider--thumbs__wrap">
+      <div class="swiper-container js-slider" data-slider="thumbs">
+        <div class="swiper-wrapper slider slider--thumbs">
+          {% for i in range(0, 3) %}
+          <button class="swiper-slide slide gallery__thumb js-lazy" data-background-image="./img/works/01-thumb.jpg"></button>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <!-- end slider -->
+  </div>
+</div>
+<!-- end gallery -->

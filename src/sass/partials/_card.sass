@@ -1,0 +1,40 @@
+.card
+  +flex(flex-start, normal, column)
+  height: calc(100% - 30px)
+  margin-bottom: 30px
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.06)
+  background-color: $white
+  +tr(box-shadow .3s)
+  +hover
+    box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.2)
+
+  &__img
+    display: block
+    +cover
+    background-color: $gray
+    padding-top: 60%
+  &__content
+    +flex(flex-start, normal, column)
+    flex-grow: 1
+    padding: 20px 25px 45px
+    +lg
+      padding: 20px
+    +md
+      padding: 15px
+  &__title
+    display: block
+    margin-bottom: 15px
+  &__meta
+    display: block
+    margin-bottom: 25px
+    +md
+      margin-bottom: 15px
+  &__text
+    display: block
+    flex-grow: 1
+    margin-bottom: 25px
+    font-size: $fz-sm
+    +md
+      margin-bottom: 15px
+
+

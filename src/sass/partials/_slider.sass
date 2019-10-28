@@ -6,10 +6,16 @@
   background-color: $white
   color: $c-title
   position: relative
+  border: 1px solid $gray-light
   +before
     +icon-arrow(.6, .6, .06, currentColor, 45, em)
     display: block
     margin-left: .3em
+  +sm
+    width: 30px
+    height: 30px
+  &[aria-disabled="true"]
+    opacity: .5
 
 .next
   transform: scaleX(-1)
@@ -17,6 +23,8 @@
 .slider
   &__wrap
     position: relative
+    *
+      box-sizing: border-box
   &__controls
     @extend .container
     width: 100%
@@ -27,28 +35,37 @@
     height: 0
     z-index: 2
     +flex(space-between, center)
+  &__prev, &__next
+    border: 0
+  &__pagination
+    position: absolute
+    z-index: 1
+    bottom: 20px
+    left: 0
+    width: 100%
+    text-align: center
+    display: none
+    +sm
+      display: block
+    .swiper-pagination-bullet
+      display: inline-block
+      opacity: 1
+      margin-right: 5px
+      margin-left: 5px
+      width: 10px
+      height: 10px
+      background-color: $gray
+      border-radius: 50%
+      &.swiper-pagination-bullet-active
+        background-color: $accent
 
   &--hero
     .slide
       +cover
     &__wrap
-      button[data-action]
-        display: none
-      .tns-nav
-        position: absolute
-        z-index: 1
-        bottom: 20px
-        left: 0
-        width: 100%
-        text-align: center
-        button
-          display: inline-block
-          margin-right: 5px
-          margin-left: 5px
-          width: 10px
-          height: 10px
-          background-color: $gray
-          border-radius: 50%
-          &.tns-nav-active
-            background-color: $accent
+      .slider
+        &__controls
+          +sm
+            display: none
+
     

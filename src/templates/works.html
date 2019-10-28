@@ -2,14 +2,13 @@
 title: works
 page: works
 hero: {
-  title: 'установка диванов и сидений',
+  bg: 'bg-hero-works.jpg',
+  title: 'примеры работ',
   breadcrumbs: {
     list: [
       { link: 'Главная' },
       { item: '-' },
-      { link: 'Наши услуги' },
-      { item: '-' },
-      { link: 'Установка диванов и сидений', modLink: 'is-active' }
+      { link: 'Примеры работ', modLink: 'is-active' }
     ]
   }
 }
@@ -18,4 +17,7 @@ hero: {
 
 {% block content %}
   {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-all-works.html" %}
+  {% include "partials/sections/_s-call.html" %}
+  {% include "partials/sections/_s-gallery.html" %}
 {% endblock %}

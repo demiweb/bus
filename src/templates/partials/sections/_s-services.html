@@ -69,10 +69,11 @@ services = [
 <!-- begin section -->
 <section class="section">
   <div class="container">
+    {% if not sectionServices.title.hidden %}
     <div class="section__title">
       <h2 class="title title--h2">какие услуги <span class="accent">мы предлагаем</span></h2>
     </div>
-
+    {% endif %}
     <!-- begin services -->
     <div class="services">
       <div class="row">

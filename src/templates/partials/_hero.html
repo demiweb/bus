@@ -1,13 +1,14 @@
 <!-- begin hero -->
-<section class="hero{% if hero.bg %} js-lazy{% endif %}" {% if hero.bg %}data-background-image="./img/hero/{{ hero.bg }}"{% endif %}>
+<section class="hero{% if hero.mod %} {{ hero.mod }}{% endif %}{% if hero.bg %} js-lazy{% endif %}" {% if hero.bg %}data-background-image="./img/hero/{{ hero.bg }}"{% endif %}>
 {% if page === 'home' %}
    <!-- begin slider -->
    <div class="slider__wrap slider--hero__wrap">
-     <div class="slider slider--hero js-slider" data-slider="hero">
-       {% for i in range(0, 3) %}
-       <!-- begin slide -->
-       <div class="slide js-lazy" data-background-image="./img/hero/bg-hero-home-01.jpg">
-         <div class="container">
+
+    <div class="swiper-container swiper-no-swiping js-slider" data-slider="hero">
+      <div class="swiper-wrapper slider slider--hero">
+        {% for i in range(0, 3) %}        
+        <div class="swiper-slide slide js-lazy" data-background-image="./img/hero/bg-hero-home-01.jpg">
+          <div class="container">
            <div class="hero__inner">
              <div class="row">
                <div class="col-lg-5 col-md-8 offset-lg-1 offset-md-1">
@@ -27,32 +28,40 @@
           </div>
         </div>
       </div>
-      <!-- end slide -->
       {% endfor %}
     </div>
+  </div>
 
     <div class="slider__controls">
      <button class="slider__prev prev js-slider-prev"></button>
      <button class="slider__next next js-slider-next"></button>
    </div>
+
+   <div class="slider__pagination js-slider-pagination"></div>
   </div>
   <!-- end slider -->
 {% else %}
 
   {% if hero.breadcrumbs %}
     <div class="hero__breadcrumbs">
-      {{ mixins.list(
-        name = 'breadcrumbs',
-        modifications = { wrap: hero.breadcrumbs.mod, item: '', link: '' },
-        list = hero.breadcrumbs.list
-      ) }}
+      <div class="container">
+        {{ mixins.list(
+          name = 'breadcrumbs',
+          modifications = { wrap: hero.breadcrumbs.mod, item: '', link: '' },
+          list = hero.breadcrumbs.list
+        ) }}
+      </div>
     </div>
   {% endif %}
   
   {% if hero.title %}
-    <div class="hero__title">
-      <h1 class="title title--h2title--white">{{ hero.title }}</h1>
+  <div class="hero__title-block">
+    <div class="container">
+      <div class="hero__title">
+        <h1 class="title title--h2 title--white">{{ hero.title | safe }}</h1>
+      </div>
     </div>
+  </div>
   {% endif %}
 
 

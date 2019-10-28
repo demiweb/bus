@@ -1,9 +1,36 @@
+{% if page === 'work-one' %}
 <!-- begin section -->
-<section class="section pb-0">
+<section class="section{% if sectionAboutText.mod %} {{ sectionAboutText.mod }}{% elseif not sectionAboutText.pb %} pb-0{% endif %}">
   <div class="container">
+    {% if not sectionAboutText.title.hidden %}
+    <div class="section__title">
+      <h2 class="title title--h2">Описание <span class="accent">проекта</span></h2>
+    </div>
+    {% endif %}
+    <!-- begin article -->
+    <div class="article">
+      <img class="js-lazy" alt="" src="" data-src="./img/article-img-02.jpg"/>
+
+      <p>Как переоборудовать микроавтобус и не пожалеть об этом? Этим вопросом задаётся каждый владелец грузового фургона, желающий переделать его 
+      в комфортабельный пассажирский микроавтобус для своих нужд. Существенная разница в стоимости такого микроавтобуса и заводского минивэна стала основной причиной большого спроса на услуги по переоборудованию. А спрос, как известно, рождает предложение. Каждый, кто хоть как то умел держать в руках инструмент, стал открывать "фирму" и предлагать соответствующие услуги</p>
+      <p>Высокая конкуренция способствовала расширению списка услуг, повышению качества и снижению стоимости переоборудования микроавтобусов. Однако, производство на многих "фирмах" в Бердичеве и по всей Украине, так и осталось на уровне кустарного.конкуренция способствовала расширению списка услуг</p>
+
+      <p>Существенная разница в стоимости такого микроавтобуса и заводского минивэна стала основной причиной большого спроса на услуги по переоборудованию. </p>
+
+    </div>
+    <!-- end article -->
+  </div>
+</section>
+<!-- end section -->
+{% else %}
+<!-- begin section -->
+<section class="section{% if sectionAboutText.mod %} {{ sectionAboutText.mod }}{% elseif not sectionAboutText.pb %} pb-0{% endif %}">
+  <div class="container">
+    {% if not sectionAboutText.title.hidden %}
     <div class="section__title">
       <h2 class="title title--h2">переоборудование <div class="accent">микроавтобусов</div></h2>
     </div>
+    {% endif %}
     <!-- begin article -->
     <div class="article">
       <img class="js-lazy" alt="" src="" data-src="./img/article-img-01.jpg"/>
@@ -23,3 +50,4 @@
   </div>
 </section>
 <!-- end section -->
+{% endif %}

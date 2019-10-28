@@ -1,0 +1,19 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    {% if not sectionGallery.title.hidden %}
+      {% if sectionGallery.title.title %}
+      <div class="section__title">
+        <h2 class="title title--h2">{{ sectionGallery.title.title | safe }}</h2>
+      </div>
+      {% else %}
+      <div class="section__title">
+        <h2 class="title title--h2">Наша <span class="accent">фотогалерея</span></h2>
+      </div>
+      {% endif %}
+    {% endif %}
+
+    {% include "partials/_gallery.html" %}
+  </div>
+</section>
+<!-- end section -->

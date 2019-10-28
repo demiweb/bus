@@ -1,0 +1,51 @@
+{%set
+steps = [
+  {
+    nmb: '01',
+    text: 'Вы оставляете заявку на сайте либо звоните нам по телефонам на странице <a href="#">Контакты</a>. И наш менеджер консультирует вас по всем возникшим вопросам.'
+  },
+  {
+    nmb: '02',
+    text: 'Вы приезжаете к нам на сервис 
+и оставляете ваше транспортное средство на определенный срок (срок зависит 
+от сложности переоборудования)'
+  },
+  {
+    nmb: '03',
+    text: 'По окончании всех работ мы звоним вам 
+и вы забираете свой обновленный микроавтобус и совершаете оплату любым удобным для вас способом.'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section js-lazy" data-background-image="./img/bg-steps.jpg">
+  <div class="container">
+    <div class="section__title">
+      <h2 class="title title--h2">Этапы <span class="accent">сотрудничества</span></h2>
+    </div>
+
+    <div class="row">
+      <div class="col-xl-4 offset-xl-1 col-lg-5">
+        <!-- begin steps -->
+        <div class="steps">
+          {% for i in steps %}
+          <!-- begin step -->
+          <div class="step">
+            <div class="step__nmb">{{ i.nmb | safe }}</div>
+
+            <div class="step__content">{{ i.text | safe }}</div>
+          </div>
+          <!-- end step -->
+          {% endfor %}
+        </div>
+        <!-- end steps -->
+      </div>
+
+      <div class="col-lg-7">
+        <div class="text-center"><img class="js-lazy" alt="" src="" data-src="./img/bus.png"/></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

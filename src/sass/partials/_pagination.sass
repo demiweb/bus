@@ -1,0 +1,22 @@
+.pagination
+  font-size: $fz-sm
+  text-align: center
+  .prev
+    margin-right: 25px
+  .next
+    margin-left: 25px
+  li
+    display: inline-block
+    vertical-align: middle
+    margin-right: 5px
+    margin-left: 5px
+    &:first-child
+      margin: 0
+    &:last-child
+      margin: 0
+  a
+    +tr(color .3s)
+    &.is-active
+      color: $accent
+    +hover
+      color: $accent

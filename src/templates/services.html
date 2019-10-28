@@ -1,0 +1,31 @@
+---
+title: services
+page: services
+hero: {
+  bg: 'bg-hero-services.jpg',
+  title: 'наши услуги',
+  breadcrumbs: {
+    list: [
+      { link: 'Главная' },
+      { item: '-' },
+      { link: 'Наши услуги', modLink: 'is-active' }
+    ]
+  }
+}
+sectionServices: {
+  title: {
+    hidden: true
+  }
+}
+sectionAboutText: {
+  pb: true
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-services.html" %}
+  {% include "partials/sections/_s-call.html" %}
+  {% include "partials/sections/_s-about-text.html" %}
+{% endblock %}

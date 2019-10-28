@@ -1,0 +1,60 @@
+{%set
+features = [
+  {
+    mod: 'feature--sm',
+    icon: 'phone-call',
+    title: { title: '<p><a href="tel:+380734060404">+38 (073) 406 04 04</a></p><p><a href="tel:+380964060404">+38 (096) 406 04 04</a></p>' }
+  },
+  {
+    mod: 'feature--sm',
+    icon: 'placeholder',
+    title: { title: 'Украина, г. Бердичев, <br>
+Ул. Короленко 41 Т' }
+  },
+  {
+    mod: 'feature--sm',
+    icon: 'time',
+    title: { title: '<p>пн - пт</p>
+<p>9:00 - 17:00</p>' }
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-6">
+        {{ mixins.textBlock(
+          mod = 's-order__text-block',
+          title = { title: 'Свяжитесь с нами', mod: 'title--h2-md' },
+          texts = [
+            {
+              text: 'Звоните нам по телефонам ниже или заезжайте в гости в рабочее время. Мы всегда вам рады!'
+            }
+          ]
+        ) }}
+
+        <!-- begin features -->
+        <div class="features features--sm s-order__features">
+          {% for i in features %}
+          <div class="features__item">
+            {% include "partials/_feature.html" %}
+          </div>
+          {% endfor %}
+        </div>
+        <!-- end features -->
+      </div>
+
+      <div class="col-6">
+        
+        <!-- begin map -->
+        <div class="map">
+          <iframe class="js-lazy" src="" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2569.751510758499!2d28.585511515881326!3d49.90346833450611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472cf983afd0fa7b%3A0x6f7c2b7d675e1339!2z0LLRg9C70LjRhtGPINCa0L7RgNC-0LvQtdC90LrQsCwgOSwg0JHQtdGA0LTQuNGH0ZbQsiwg0JbQuNGC0L7QvNC40YDRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgMTMzMDA!5e0!3m2!1sru!2sua!4v1572278279565!5m2!1sru!2sua" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+        <!-- end map -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

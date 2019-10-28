@@ -1,0 +1,54 @@
+.faq-item
+  $padding: 30px
+  $padding-md: 15px
+  $this: &
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15)
+  margin-bottom: 15px
+  &__title
+    display: block
+    position: relative
+    padding: $padding
+    padding-right: ($padding *2) + 5px
+    color: $c-title
+    width: 100%
+    text-align: left
+    +md
+      padding: $padding-md
+      padding-right: ($padding *2) + 5px
+    &.is-active
+      #{$this}__icon
+        background-color: transparent
+        color: $accent
+        &::before
+          content: '-'
+  &__icon
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+    right: $padding
+    background-color: $accent
+    width: 35px
+    height: 35px
+    border-radius: 50%
+    color: $white
+    font-size: 32px
+    +flex(center, center)
+    +md
+      right: $padding-md
+    &::before
+      content: '+'
+      display: block
+  &__content
+    padding-left: $padding
+    padding-right: $padding
+    max-height: 0
+    overflow: hidden
+    +md
+      padding-left: $padding-md
+      padding-right: $padding-md
+    &.is-active
+      overflow: visible
+      max-height: none
+      padding-bottom: 30px
+    a
+      color: $blue

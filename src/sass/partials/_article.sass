@@ -2,7 +2,15 @@
   color: $c-title
   text-align: justify
   +clr
-  p, h1, h2, h3, h4, h5, h6, ul, ol
+  h2
+    @extend .title
+    @extend .title--h3
+    @extend .title--ttn
+  h3
+    @extend .title
+    @extend .title--h5
+    @extend .title--ttn
+  p, h1, h2, h3, h4, h5, h6, ul, ol, blockquote
     +notlast
       margin-bottom: 25px
       +md
@@ -16,3 +24,16 @@
       float: none
       margin-left: 0
       margin-bottom: 15px
+
+  ol
+    list-style-type: decimal
+    margin-left: 1.1em
+
+  ul
+    li
+      &::before
+        content: "\2022"
+        display: inline-block
+        margin-right: .5em
+  a
+    color: $blue

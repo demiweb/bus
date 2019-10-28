@@ -182,3 +182,10 @@
     backface-visibility: hidden
     border-radius: 2px
 
+  &--arrow
+    background-color: $accent
+    +before
+      +icon-arrow(10, 10, 2, $white, 225)
+      position: static
+      display: inline-block
+      margin-left: -.2em

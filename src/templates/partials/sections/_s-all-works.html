@@ -1,0 +1,67 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-2 col-lg-3">
+        <div class="section__aside-toggle">
+          <button class="burger burger--arrow js-burger" data-menu-target="aside"></button>
+        </div>
+        <div class="section__aside js-sticky-polyfill js-menu" data-menu="aside">
+          <!-- begin aside -->
+          <aside class="aside">
+            <div class="aside__title">
+              <h5 class="title title--h5">ПЕРЕОБОРУДОВАНИЕ АВТОМОБИЛЕЙ:</h5>
+            </div>
+
+            <div class="aside__nav">
+              {{ mixins.list(
+                name = 'aside-nav',
+                modifications = { wrap: '', item: '', link: '' },
+                list = [
+                  { link: 'Volkswagen' },
+                  { link: 'Mercedes', modLink: 'is-active' },
+                  { link: 'Renault' },
+                  { link: 'Ford' },
+                  { link: 'Fiat' },
+                  { link: 'Opel' },
+                  { link: 'Citroen' },
+                  { link: 'Iveco' }
+                ]
+              ) }}
+            </div>
+          </aside>
+          <!-- end aside -->
+        </div>
+      </div>
+
+      <div class="col-xl-10 col-lg-9">
+        <div class="row">
+          {% for i in range(0, 8) %}
+          <div class="col-sm-6">
+            <!-- begin work-link -->
+            <a href="#" class="work-link js-lazy" data-background-image="./img/works/01.jpg">
+              <span class="work-link__cover">
+                <span class="work-link__text">Переоборудование салона <br>
+                Mercedec Sprinter 313</span>
+                <span class="work-link__link link">
+                  <span class="link__title">Смотреть</span>
+                  <span class="link__arrow"></span>
+                </span>
+              </span>
+            </a>
+            <!-- end work-link -->
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="section__btn">
+        <button class="btn-simple">
+          {{ mixins.icon('refresh') }}
+          Раскрыть остальные работы
+        </button>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

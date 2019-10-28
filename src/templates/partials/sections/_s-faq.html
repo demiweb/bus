@@ -1,0 +1,31 @@
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="section__title">
+      <h2 class="title title--h2">Часто задаваемые <span class="accent">вопросы</span></h2>
+    </div>
+
+    <div class="faq js-accordion">
+      <div class="row">
+        {% for i in range(0, 6) %}
+        <div class="col-lg-6">
+          <!-- begin faq-item -->
+          <div class="faq-item">
+            <button class="faq-item__title js-accordion-title">
+              Сколько стоит переоборудовать микроавтобус?
+              <span class="faq-item__icon"></span>
+            </button>
+
+            <div class="faq-item__content js-accordion-content">Стоимость переоборудования микроавтобусов зависит от многих факторов, таких
+как: сложность работы, материалы, вид услуги и т.д. НБазовые цены на наши
+услуги вы сможете увидеть на странице <a href="#">Цены</a></div>
+          </div>
+          <!-- end faq-item -->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

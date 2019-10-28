@@ -1,0 +1,32 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="section__title">
+      <h2 class="title title--h2">другие наши <span class="accent">работы</span></h2>
+    </div>
+
+    <!-- begin works -->
+    <div class="works">
+      <div class="row">
+        {% for i in range(0, 3) %}
+        <div class="col-md-4 col-sm-6">
+          <!-- begin work-link -->
+          <a href="#" class="work-link work-link--md js-lazy" data-background-image="./img/works/01.jpg">
+            <span class="work-link__cover">
+              <span class="work-link__text">Переоборудование салона <br>
+Mercedec Sprinter 313</span>
+              <span class="work-link__link link">
+                <span class="link__title">Смотреть</span>
+                <span class="link__arrow"></span>
+              </span>
+            </span>
+          </a>
+          <!-- end work-link -->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- end works -->
+  </div>
+</section>
+<!-- end section -->

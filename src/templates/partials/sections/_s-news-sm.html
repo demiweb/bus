@@ -1,0 +1,50 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="section__title">
+      <h2 class="title title--h2">похожие <span class="accent">статьи</span></h2>
+    </div>
+
+    <div class="row">
+      {% for i in range(0, 3) %}
+      <div class="col-lg-4 col-sm-6">
+        <!-- begin card -->
+        <a href="#" class="card">
+          <span class="card__img js-lazy" data-background-image="./img/news/01.jpg"></span>
+
+          <span class="card__content">
+            <span class="card__meta">
+              <span class="meta">
+                <span class="meta__item">
+                  {{ mixins.icon('calendar') }}
+                  25.07.2019
+                </span>
+                <span class="meta__item">
+                  {{ mixins.icon('eye') }}
+                  698
+                </span>
+              </span>
+            </span>
+
+            <span class="card__title">
+              <span class="title title--h5 title--ttn">Какой материал лучше всего использовать для перетяжки салона?</span>
+            </span>
+
+            <span class="card__text">Выбор материала для перетяжки салона всегда 
+оставляет много вопросов, таких как: какой бренд 
+выбрать? Как распознать подделку? Почему...</span>
+
+            <span class="card__link link link--no-hover">
+              <span class="link__title">подробнее</span>
+              <span class="link__arrow"></span>
+            </span>
+
+          </span>
+        </a>
+        <!-- end card -->
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- end section -->

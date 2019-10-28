@@ -92,6 +92,31 @@ body
   font-size: em(21)
   padding: .1em 2.15em 0
   color: $white
+
+.meta
+  font-size: $fz-xs
+  +flex(flex-start, center)
+  .icon
+    top: .15em
+    position: relative
+    font-size: 1.1em
+    margin-right: .3em  
+  &__item
+    +notlast
+      margin-right: 1em
+
+blockquote
+  border-left: 3px solid  $accent
+  padding: 25px
+  font-style: italic
+  background-color: $gray-lightest
+
+.map
+  position: relative
+  padding-top: 60%
+  background-color: $gray
+  iframe
+    +coverdiv
     
 
     

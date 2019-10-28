@@ -9,24 +9,49 @@ class MySlider {
 
   _getOptions() {
     this.getOptions = ({
-      container, prevButton, nextButton, onInit,
+      container, navigation, pagination, onInit, thumbsSlider,
     }) => ({
       hero: {
-        container,
-        prevButton,
-        nextButton,
-        controls: false,
-        onInit,
-        items: 1,
+        navigation,
+        on: {
+          init: onInit,
+        },
         loop: true,
-        nav: true,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplayButton: false,
-        responsive: {
+        pagination: {
+          el: pagination,
+          type: 'bullets',
+          bulletElement: 'button',
+          clickable: true,
+        },
+        autoplay: {
+          delay: 4000,
+        },
+        noSwiping: false,
+        breakpoints: {
           768: {
-            nav: false,
-            controls: true,
+            noSwiping: true,
+          },
+        },
+      },
+      gallery: {
+        navigation,
+        on: {
+          init: onInit,
+        },
+        // loop: true,
+      },
+      thumbs: {
+        slidesPerView: 2,
+        on: {
+          init: onInit,
+        },
+        spaceBetween: 15,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+          768: {
+            spaceBetween: 30,
           },
         },
       },
@@ -35,11 +60,36 @@ class MySlider {
 
   _initSliders() {
     this.containers.forEach((container) => {
-      if (container.classList.contains(classNames.plugin.container)) return;
+      if (container.classList.contains(classNames.plugin.initialized)) return;
+
+      const name = container.dataset.slider;
 
       const slider = new Slider(container, this.getOptions);
-      slider.init();
+      if (name !== 'gallery') {
+        slider.init();
+      }
+
       this.sliders = [...this.sliders, slider];
+    });
+
+    this.initGallerySlider();
+  }
+
+  initGallerySlider() {
+    const gallerySliders = this.containers.filter((container) => container.dataset.slider === 'gallery');
+    if (!gallerySliders.length) return;
+
+    const [thumbsSlider] = this.sliders.filter((slider) => slider.name === 'thumbs');
+    this.thumbsSlider = thumbsSlider.swiper;
+
+    this.sliders.forEach((sliderObj) => {
+      const slider = sliderObj;
+      if (slider.name === 'gallery') {
+        slider.options.thumbs = {
+          swiper: this.thumbsSlider,
+        };
+        slider.init();
+      }
     });
   }
 

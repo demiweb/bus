@@ -1,0 +1,65 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      {% for i in range(0, 9) %}
+      <div class="col-lg-4 col-sm-6">
+        <!-- begin card -->
+        <a href="#" class="card">
+          <span class="card__img js-lazy" data-background-image="./img/news/01.jpg"></span>
+
+          <span class="card__content">
+            <span class="card__meta">
+              <span class="meta">
+                <span class="meta__item">
+                  {{ mixins.icon('calendar') }}
+                  25.07.2019
+                </span>
+                <span class="meta__item">
+                  {{ mixins.icon('eye') }}
+                  698
+                </span>
+              </span>
+            </span>
+
+            <span class="card__title">
+              <span class="title title--h5 title--ttn">Какой материал лучше всего использовать для перетяжки салона?</span>
+            </span>
+
+            <span class="card__text">Выбор материала для перетяжки салона всегда 
+оставляет много вопросов, таких как: какой бренд 
+выбрать? Как распознать подделку? Почему...</span>
+
+            <span class="card__link link link--no-hover">
+              <span class="link__title">подробнее</span>
+              <span class="link__arrow"></span>
+            </span>
+
+          </span>
+        </a>
+        <!-- end card -->
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- begin section__pagination -->
+    <div class="section__pagination">
+      {{ mixins.list(
+        name = 'pagination',
+        modifications = { wrap: '', item: '', link: '' },
+        list = [
+          { link: ' ', modLink: 'prev' },
+          { link: '1' },
+          { link: '2', modLink: 'is-active' },
+          { link: '3' },
+          { item: '...' },
+          { link: '8' },
+          { link: '9' },
+          { link: ' ', modLink: 'next' }
+        ]
+      ) }}
+    </div>
+    <!-- end section__pagination -->
+  </div>
+</section>
+<!-- end section -->
