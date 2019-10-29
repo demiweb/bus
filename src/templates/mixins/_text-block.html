@@ -1,6 +1,6 @@
 {% macro textBlock(mod, title, texts, upttl) %}
 <!-- begin text-block -->
-<div class="text-block {% if mod %} {{ mod }}{% endif %}">
+<div class="text-block{% if mod %} {{ mod }}{% endif %}">
   {% if upttl %}
   <div class="text-block__upttl{% if upttl.mod %} {{ upttl.mod }}{% endif %}">{{ upttl.title | safe }}</div>
   {% endif %}

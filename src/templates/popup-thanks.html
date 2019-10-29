@@ -1,0 +1,19 @@
+---
+title: home
+page: home
+popup: {
+  thanks: true
+}
+bodyClass: 'no-scroll'
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-order.html" %}
+  {% include "partials/sections/_s-features.html" %}
+  {% include "partials/sections/_s-about-text.html" %}
+  {% include "partials/sections/_s-services.html" %}
+  {% include "partials/sections/_s-call.html" %}
+  {% include "partials/sections/_s-works.html" %}
+{% endblock %}

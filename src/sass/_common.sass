@@ -42,6 +42,7 @@ body
     padding-top: $header-height-sm
 
 .text-block
+  $this: &
   margin-bottom: 45px
   +lg
     margin-bottom: 30px
@@ -56,6 +57,18 @@ body
     margin-bottom: 25px
     +md
       margin-bottom: 15px
+
+  &--sm
+    margin-bottom: 30px
+    #{$this}__title
+      margin-bottom: 10px
+      +md
+        margin-bottom: 10px
+    // #{$this}__text
+    //   margin-bottom: 10px
+    //   +md
+    //     margin-bottom: 10px
+
 
 .link
   +inline-flex(flex-start, center)
@@ -117,6 +130,8 @@ blockquote
   background-color: $gray
   iframe
     +coverdiv
+  +xss
+    padding-top: 80%
     
 
     

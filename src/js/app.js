@@ -13,6 +13,7 @@ import slider from './components/sliders/setSliders';
 import toggleMenu from './components/toggleMenu';
 import setGallery from './components/setGallery';
 import setAccordion from './components/setAccordion';
+import setPopups from './components/setPopups';
 
 document.addEventListener('DOMContentLoaded', () => {
   sayHello();
@@ -27,4 +28,5 @@ document.addEventListener('DOMContentLoaded', () => {
   toggleMenu();
   setGallery();
   setAccordion();
+  setPopups();
 });

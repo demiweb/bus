@@ -43,7 +43,8 @@
         <div class="header__btn">
           {{ mixins.btn(
             title = 'Заказать звонок',
-            mod = '',
+            mod = 'js-popup-open',
+            attributes = { 'data-popup-target': 'call' },
             href = false
           ) }}
         </div>
@@ -81,7 +82,8 @@
         <div class="header__btn-mob">
           {{ mixins.btn(
             title = 'Заказать звонок',
-            mod = '',
+            mod = 'js-popup-open',
+            attributes = { 'data-popup-target': 'call' },
             href = false
           ) }}
         </div>

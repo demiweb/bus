@@ -2,25 +2,25 @@
 features = [
   {
     icon: 'automobile-with-wrench',
-    title: { title: 'Опытные специалисты', mod: 'title--ttn' },
+    title: { title: 'Опытные специалисты', mod: 'title--h5 title--ttn' },
     text: 'они знают, как предоставить
 высококлассный сервис'
   },
   {
     icon: 'rearview',
-    title: { title: 'Качественные материалы', mod: 'title--ttn' },
+    title: { title: 'Качественные материалы', mod: 'title--h5 title--ttn' },
     text: 'которые прослужат не один
 десяток лет'
   },
   {
     icon: 'clock',
-    title: { title: 'Работаем без задержек', mod: 'title--ttn' },
+    title: { title: 'Работаем без задержек', mod: 'title--h5 title--ttn' },
     text: 'и всегда укладываемся
 вовремя'
   },
   {
     icon: 'customer-review',
-    title: { title: 'Нам доверяют более 300', mod: 'title--ttn' },
+    title: { title: 'Нам доверяют более 300', mod: 'title--h5 title--ttn' },
     text: 'автолюбителей, которые
 всегда возвращаются снова'
   }
@@ -36,9 +36,9 @@ features = [
 
     <!-- begin features -->
     <div class="features">
-      <div class="row">
+      <div class="row justify-content-center">
         {% for i in features %}
-        <div class="col-lg-3 col-sm-6">
+        <div class="col-lg-3 col-6">
           {% include "partials/_feature.html" %}
         </div>
         {% endfor %}

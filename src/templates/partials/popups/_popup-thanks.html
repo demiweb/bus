@@ -1,0 +1,22 @@
+<!-- begin popup -->
+<div class="popup{% if popup.thanks %} is-active{% endif %} popup--color js-popup" data-popup="thanks">
+  <div class="popup__inner js-lazy" data-background-image="./img/bg-popup-thanks.jpg">
+    <button class="popup__close js-popup-close"></button>
+
+    <div class="popup__content">
+      {{ mixins.textBlock(
+        mod = 'text-block--sm',
+        title = { title: 'Спасибо за заявку!', mod: 'title--h3' },
+        texts = [
+          { text: 'Наш менеджер свяжется с вами по указанному номеру телефона в ближайшее время' }
+        ]
+      ) }}
+
+      {{ mixins.btn(
+        title = 'Перейти на главную',
+        mod = ''
+      ) }}
+    </div>
+  </div>
+</div>
+<!-- end popup -->

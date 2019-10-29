@@ -57,7 +57,7 @@
                 </div>
               </div>
               <div class="header__btn">
-                <button class="btn">Заказать звонок</button>
+                <button class="btn js-popup-open" data-popup-target="call">Заказать звонок</button>
               </div>
               <div class="header__work-hrs">
                 <!-- begin work-hrs -->
@@ -102,7 +102,7 @@
                 <!-- end nav -->
               </div>
               <div class="header__btn-mob">
-                <button class="btn">Заказать звонок</button>
+                <button class="btn js-popup-open" data-popup-target="call">Заказать звонок</button>
               </div>
             </div>
           </div>
@@ -185,7 +185,7 @@
             <div class="row align-items-center">
               <div class="col-xl-5 col-lg-7">
                 <!-- begin text-block -->
-                <div class="text-block  s-order__text-block">
+                <div class="text-block s-order__text-block">
                   <div class="text-block__title">
                     <h2 class="title title--h2-md">Готовы заказать <small>переоборудование?</small></h2>
                   </div>
@@ -206,7 +206,7 @@
                       </div>
                       <div class="feature__content">
                         <div class="feature__title">
-                          <h5 class="title title--h5">Гарантия</h5>
+                          <div class="title title--h6">Гарантия</div>
                         </div>
                         <div class="feature__text">12 месяцев</div>
                       </div>
@@ -226,7 +226,7 @@
                       </div>
                       <div class="feature__content">
                         <div class="feature__title">
-                          <h5 class="title title--h5">самые Низкие</h5>
+                          <div class="title title--h6">самые Низкие</div>
                         </div>
                         <div class="feature__text">цены в городе</div>
                       </div>
@@ -245,7 +245,7 @@
                       </div>
                       <div class="feature__content">
                         <div class="feature__title">
-                          <h5 class="title title--h5">Установка</h5>
+                          <div class="title title--h6">Установка</div>
                         </div>
                         <div class="feature__text">от 24 часов</div>
                       </div>
@@ -303,8 +303,8 @@
             </div>
             <!-- begin features -->
             <div class="features">
-              <div class="row">
-                <div class="col-lg-3 col-sm-6">
+              <div class="row justify-content-center">
+                <div class="col-lg-3 col-6">
                   <!-- begin feature -->
                   <div class="feature">
                     <div class="feature__icon">
@@ -318,14 +318,14 @@
                     </div>
                     <div class="feature__content">
                       <div class="feature__title">
-                        <h5 class="title title--h5 title--ttn">Опытные специалисты</h5>
+                        <div class="title title--h5 title--ttn">Опытные специалисты</div>
                       </div>
                       <div class="feature__text">они знают, как предоставить высококлассный сервис</div>
                     </div>
                   </div>
                   <!-- end feature -->
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-3 col-6">
                   <!-- begin feature -->
                   <div class="feature">
                     <div class="feature__icon">
@@ -338,14 +338,14 @@
                     </div>
                     <div class="feature__content">
                       <div class="feature__title">
-                        <h5 class="title title--h5 title--ttn">Качественные материалы</h5>
+                        <div class="title title--h5 title--ttn">Качественные материалы</div>
                       </div>
                       <div class="feature__text">которые прослужат не один десяток лет</div>
                     </div>
                   </div>
                   <!-- end feature -->
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-3 col-6">
                   <!-- begin feature -->
                   <div class="feature">
                     <div class="feature__icon">
@@ -362,14 +362,14 @@
                     </div>
                     <div class="feature__content">
                       <div class="feature__title">
-                        <h5 class="title title--h5 title--ttn">Работаем без задержек</h5>
+                        <div class="title title--h5 title--ttn">Работаем без задержек</div>
                       </div>
                       <div class="feature__text">и всегда укладываемся вовремя</div>
                     </div>
                   </div>
                   <!-- end feature -->
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-3 col-6">
                   <!-- begin feature -->
                   <div class="feature">
                     <div class="feature__icon">
@@ -381,7 +381,7 @@
                     </div>
                     <div class="feature__content">
                       <div class="feature__title">
-                        <h5 class="title title--h5 title--ttn">Нам доверяют более 300</h5>
+                        <div class="title title--h5 title--ttn">Нам доверяют более 300</div>
                       </div>
                       <div class="feature__text">автолюбителей, которые всегда возвращаются снова</div>
                     </div>
@@ -579,7 +579,7 @@
             <div class="row">
               <div class="col-xl-8">
                 <!-- begin text-block -->
-                <div class="text-block ">
+                <div class="text-block">
                   <div class="text-block__upttl tag">Свяжитесь с нами</div>
                   <div class="text-block__title">
                     <h2 class="title title--h2 title--white">Уже готовы переоборудовать свой микроавтобус?</h2>
@@ -778,6 +778,67 @@
       <!-- end footer -->
     </div>
     <!-- END content -->
+    <!-- begin popup -->
+    <div class="popup popup--sm js-popup" data-popup="call">
+      <div class="popup__inner">
+        <button class="popup__close js-popup-close"></button>
+        <div class="popup__form">
+          <!-- begin form -->
+          <div class="form">
+            <form>
+              <div class="form__title">
+                <h3 class="title title--h3">заказать звонок</h3>
+              </div>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input">
+                  <input type="text" placeholder="Имя">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input">
+                  <input type="tel" placeholder="+38 ( _ _ _ ) _ _ _ - _ _ - _ _">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field">
+                <!-- begin checkbox -->
+                <label class="checkbox">
+                  <input type="checkbox" checked="">
+                  <span>Я согласен на обработку персональных данных</span>
+                </label>
+                <!-- end checkbox -->
+              </div>
+              <div class="form__field form__btn">
+                <button class="btn btn--full">Оставить заявку</button>
+              </div>
+            </form>
+          </div>
+          <!-- end form -->
+        </div>
+      </div>
+    </div>
+    <!-- end popup -->
+    <!-- begin popup -->
+    <div class="popup popup--color js-popup" data-popup="thanks">
+      <div class="popup__inner js-lazy" data-background-image="./img/bg-popup-thanks.jpg">
+        <button class="popup__close js-popup-close"></button>
+        <div class="popup__content">
+          <!-- begin text-block -->
+          <div class="text-block text-block--sm">
+            <div class="text-block__title">
+              <h2 class="title title--h3">Спасибо за заявку!</h2>
+            </div>
+            <div class="text-block__text ">Наш менеджер свяжется с вами по указанному номеру телефона в ближайшее время</div>
+          </div>
+          <!-- end text-block -->
+          <a href="#" class="btn">Перейти на главную</a>
+        </div>
+      </div>
+    </div>
+    <!-- end popup -->
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->

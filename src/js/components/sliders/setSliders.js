@@ -9,7 +9,7 @@ class MySlider {
 
   _getOptions() {
     this.getOptions = ({
-      container, navigation, pagination, onInit, thumbsSlider,
+      container, navigation, pagination, onInit,
     }) => ({
       hero: {
         navigation,

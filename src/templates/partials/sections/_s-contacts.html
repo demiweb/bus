@@ -2,29 +2,36 @@
 features = [
   {
     mod: 'feature--sm',
-    icon: 'phone-call',
-    title: { title: '<p><a href="tel:+380734060404">+38 (073) 406 04 04</a></p><p><a href="tel:+380964060404">+38 (096) 406 04 04</a></p>' }
+    icon: 'telephone',
+    title: {
+      title: '<p><a href="tel:+380734060404">+38 (073) 406 04 04</a></p><p><a href="tel:+380964060404">+38 (096) 406 04 04</a></p>',
+      mod: 'title--h6'
+    }
   },
   {
     mod: 'feature--sm',
-    icon: 'placeholder',
-    title: { title: 'Украина, г. Бердичев, <br>
-Ул. Короленко 41 Т' }
+    icon: 'pin',
+    title: {
+      title: 'Украина, г. Бердичев, <br>Ул. Короленко 41 Т',
+      mod: 'title--h6'
+    }
   },
   {
     mod: 'feature--sm',
-    icon: 'time',
-    title: { title: '<p>пн - пт</p>
-<p>9:00 - 17:00</p>' }
+    icon: 'clock-filled',
+    title: {
+      title: '<p>пн - пт</p><p>9:00 - 17:00</p>',
+      mod: 'title--h6'
+    }
   }
 ]
 %}
 
 <!-- begin section -->
-<section class="section">
+<section class="section section--gray-lightest">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-6">
+      <div class="col-lg-6">
         {{ mixins.textBlock(
           mod = 's-order__text-block',
           title = { title: 'Свяжитесь с нами', mod: 'title--h2-md' },
@@ -46,7 +53,7 @@ features = [
         <!-- end features -->
       </div>
 
-      <div class="col-6">
+      <div class="col-lg-6">
         
         <!-- begin map -->
         <div class="map">

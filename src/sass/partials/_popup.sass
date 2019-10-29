@@ -1,0 +1,61 @@
+.popup
+  $this: &
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 20
+  background-color: rgba($black, .7)
+  overflow: auto
+  padding: 15px
+  +vertical
+  +hidden
+  +ready
+    +tr(opacity .3s, visibility .3s)
+  &.is-active
+    +visible
+  &__inner
+    background-color: $white
+    display: inline-block
+    vertical-align: middle
+    font-size: $fz
+    width: 100%
+    max-width: 930px
+    position: relative
+    padding: 60px
+    +lg
+      padding: 40px
+    +md
+      padding: 20px
+    +sm
+      font-size: $fz-sm-px
+  &__close
+    color: $c-title
+    +icon-close(15, 1, currentColor)
+    position: absolute
+    z-index: 1
+    top: 20px
+    right: 20px
+  &__content
+    max-width: 410px
+    padding: 70px 0
+    text-align: left
+    +md
+      max-width: 320px
+
+  &--sm
+    #{$this}__inner
+      padding: 0
+      max-width: 450px
+      +lg
+        padding: 0
+      +md
+        padding: 0
+  &--color
+    #{$this}__inner
+      +cover
+      background-position: 15% 50%
+    #{$this}__close
+      color: $white
+

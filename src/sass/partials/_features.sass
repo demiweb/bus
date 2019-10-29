@@ -2,14 +2,14 @@
   $this: &
 
   &--sm
-    +flex(flex-start, normal, row, wrap)
+    +flex(center, normal, row, wrap)
     #{$this}__item
       width: 33.33333%
       padding-right: 10px
       +flex(center)
       border-right: 1px dashed $gray-light
       +xs
-        width: 100%
+        width: 50%
         padding-right: 0
         border-right: 0
       &:nth-child(1)
@@ -48,3 +48,6 @@
   &--sm
     #{$this}__text
       text-transform: uppercase
+      font-size: $fz-xs
+    #{$this}__title
+      margin-bottom: 5px
