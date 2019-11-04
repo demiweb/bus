@@ -41,17 +41,20 @@ class MySlider {
         // loop: true,
       },
       thumbs: {
-        slidesPerView: 2,
+        slidesPerView: 3,
         on: {
           init: onInit,
         },
-        spaceBetween: 15,
+        spaceBetween: 5,
         freeMode: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
         breakpoints: {
-          768: {
+          992: {
             spaceBetween: 30,
+          },
+          768: {
+            spaceBetween: 15,
           },
         },
       },

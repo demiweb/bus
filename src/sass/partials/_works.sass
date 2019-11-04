@@ -1,7 +1,7 @@
 .work-link
   $this: &
   display: block
-  padding-top: 45%
+  padding-top: 55%
   background-color: $gray
   margin-bottom: 30px
   height: calc(100% - 30px)
@@ -9,7 +9,7 @@
   position: relative
   color: $white
   +hover
-    #{$this}__cover
+    #{$this}__link
       +visible
   +md
     margin-bottom: 15px
@@ -22,12 +22,15 @@
     +flex(center, center, column)
     background-color: rgba($black, .5)
     +tr(visibility .3s, opacity .3s)
-    +hidden
+    
   &__text
     display: block
     font-weight: 700
     text-align: center
     margin-bottom: 15px
+  &__link
+    // +hidden
+    +tr(visibility .3s, opacity .3s)
 
   &--md
     padding-top: 60%

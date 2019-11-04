@@ -1,29 +1,23 @@
 .gallery
   $this: &
-  +flex(flex-start, normal, row, wrap)
+  // +flex(flex-start, normal, row, wrap)
   &__slider
-    width: 50%
-    padding-right: 15px
-    +sm
-      width: 100%
-      padding-right: 0
-      margin-bottom: 15px
+    margin-bottom: 15px
+      
   &__thumbs
-    width: 50%
-    padding-left: 15px
     +flex(center, normal, column)
     +sm
       width: 100%
       padding-left: 0
   &__img
-    padding-top: 60%
+    padding-top: 40%
     position: relative
     +cover
     +hover
       #{$this}__img-cover
         +visible
   &__thumb
-    padding-top: 30%
+    padding-top: 15%
     display: block
     +cover
 
