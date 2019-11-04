@@ -1,4 +1,7 @@
-{% macro textBlock(mod, title, texts, upttl) %}
+{% from 'mixins/_btn.html' import btn %}
+{% set btn = btn %}
+
+{% macro textBlock(mod, title, texts, upttl, button) %}
 <!-- begin text-block -->
 <div class="text-block{% if mod %} {{ mod }}{% endif %}">
   {% if upttl %}
@@ -14,6 +17,17 @@
     {% for i in texts %}
     <div class="text-block__text {% if i.mod %} {{ i.mod }}{% endif %}">{{ i.text | safe }}</div>
     {% endfor %}
+  {% endif %}
+
+  {% if button %}
+  <div class="text-block__btn">
+    {{ btn(
+      title = button.title,
+      mod = button.mod,
+      href = button.href,
+      attributes = button.attributes
+    ) }}
+  </div>
   {% endif %}
 </div>
 <!-- end text-block -->
