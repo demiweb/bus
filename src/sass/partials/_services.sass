@@ -28,3 +28,39 @@
     font-size: $fz-sm
     +md
       margin-bottom: 5px
+
+.services-sm
+  margin-bottom: -30px
+  +xs
+    .row
+      margin-left: -5px
+      margin-right: -5px
+    [class*="col-"]
+      padding-left: 5px
+      padding-right: 5px
+.service-sm
+  height: calc(100% - 30px)  
+  +flex(flex-start, normal, column)
+  margin-bottom: 30px
+  
+  &__icon
+    color: $accent
+    margin-bottom: 5px
+    .icon
+      font-size: em(45)
+    .icon-menu
+      font-size: em(35)
+
+  &__body
+    flex-grow: 1
+    text-align: center
+    padding: 20px
+    border: 1px solid  #e8e8e8
+    +flex(center, normal, column)
+  &__footer
+    text-align: center
+    background-color: #e8e8e8
+    // padding: 10px
+    font-size: 1.4em
+    font-weight: 600
+

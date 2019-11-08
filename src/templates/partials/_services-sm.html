@@ -1,0 +1,72 @@
+{%set
+services = [
+  {
+    title: 'Кондиционер',
+    icon: 'snowflake',
+    sign: '+'
+  },
+  {
+    title: 'Багажные полки',
+    icon: 'menu',
+    sign: '-'
+  },
+  {
+    title: 'Сигнализация',
+    icon: 'car-alarm-key',
+    sign: '+'
+  },
+  {
+    title: 'Подсветка',
+    icon: 'light-bulb',
+    sign: '-'
+  },
+  {
+    title: 'Мультимедиа',
+    icon: 'radio',
+    sign: '-'
+  },
+  {
+    title: 'Шумоизоляция',
+    icon: 'mute',
+    sign: '+'
+  },
+  {
+    title: 'Шторки',
+    icon: 'theater-curtains',
+    sign: '+'
+  },
+  {
+    title: 'Оббивка руля',
+    icon: 'steering-wheel',
+    sign: '+'
+  }
+]
+%}
+
+<!-- begin services-sm -->
+<div class="services-sm">
+  <div class="row">
+    {% for i in services %}
+    <div class="col-xl-6 col-lg-3 col-md-4 col-6">
+      <!-- begin service-sm -->
+      <div class="service-sm">
+        <div class="service-sm__body">
+          <div class="service-sm__icon">
+            {{ mixins.icon(i.icon) }}
+          </div>
+
+          <div class="service-sm__title">
+            <h5 class="title title--h5 title--ttn">{{ i.title | safe }}</h5>
+          </div>
+        </div>
+
+        <div class="service-sm__footer">
+          {{ i.sign | safe }}
+        </div>
+      </div>
+      <!-- end service-sm -->
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<!-- end services-sm -->

@@ -50,11 +50,8 @@ class MySlider {
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
         breakpoints: {
-          992: {
-            spaceBetween: 30,
-          },
           768: {
-            spaceBetween: 15,
+            slidesPerView: 5,
           },
         },
       },

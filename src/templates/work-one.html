@@ -16,16 +16,21 @@ hero: {
 }
 sectionGallery: {
   title: {
-    title: 'фотогалерея <span class="accent">проекта</span>'
-  }
+    hidden: true
+  },
+  mod: 'pb-0',
+  services: true
+}
+sectionAboutText: {
+  pb: true
 }
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
   {% include "partials/_hero.html" %}
-  {% include "partials/sections/_s-about-text.html" %}
   {% include "partials/sections/_s-gallery.html" %}
+  {% include "partials/sections/_s-about-text.html" %}  
   {% include "partials/sections/_s-call.html" %}
   {% include "partials/sections/_s-works-other.html" %}
 {% endblock %}

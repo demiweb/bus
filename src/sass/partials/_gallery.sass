@@ -2,7 +2,7 @@
   $this: &
   // +flex(flex-start, normal, row, wrap)
   &__slider
-    margin-bottom: 15px
+    margin-bottom: 5px
       
   &__thumbs
     +flex(center, normal, column)
@@ -19,11 +19,11 @@
     +xs
       padding-top: 60%
   &__thumb
-    padding-top: 15%
+    padding-top: 11%
     display: block
     +cover
     +xs
-      padding-top: 20%
+      padding-top: 15%
 
   &__img-cover
     +coverdiv
@@ -42,3 +42,14 @@
     height: 45px
     .icon
       font-size: 21px
+
+  &--height
+    height: 100%
+    +flex(flex-start, normal, column)
+    +lg
+      margin-bottom: 30px
+      height: auto
+    #{$this}__slider
+      flex-grow: 1
+      .slider__wrap, .swiper-container
+        height: 100%

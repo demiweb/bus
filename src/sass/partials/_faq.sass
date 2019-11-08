@@ -19,8 +19,8 @@
       #{$this}__icon
         background-color: transparent
         color: $accent
-        &::before
-          content: '-'
+        &::after
+          display: none
   &__icon
     position: absolute
     top: 50%
@@ -37,9 +37,18 @@
       right: $padding-md
     .is-ie &
       display: none
-    &::before
-      content: '+'
+    &::before, &::after
+      content: ''
       display: block
+      background-color: currentColor
+      +vcenter
+    &::before
+      width: 15px
+      height: 2px
+    &::after
+      width: 2px
+      height: 15px
+      // display: block
   &__content
     padding-left: $padding
     padding-right: $padding
