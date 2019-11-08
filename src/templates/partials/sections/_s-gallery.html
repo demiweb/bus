@@ -1,6 +1,8 @@
 <!-- begin section -->
 <section class="section{% if sectionGallery.mod %} {{ sectionGallery.mod }}{% endif %}">
+  {% if not sectionGallery.container.hidden %}
   <div class="container">
+  {% endif %}
     {% if not sectionGallery.title.hidden %}
       {% if sectionGallery.title.title %}
       <div class="section__title">
@@ -15,12 +17,12 @@
 
     {% if sectionGallery.services %}
       <div class="row">
-        <div class="col-xl-8">
+        <div class="col col-xll-8">
           {% set gallery = { mod: 'gallery--height' } %}
           {% include "partials/_gallery.html" %}
         </div>
         
-        <div class="col-xl-4">
+        <div class="col col-xll-4">
           {% include "partials/_services-sm.html" %}
         </div>
       </div>
@@ -30,6 +32,8 @@
       {% include "partials/_gallery.html" %}
 
     {% endif %}
+  {% if not sectionGallery.container.hidden %}
   </div>
+  {% endif %}
 </section>
 <!-- end section -->

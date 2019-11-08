@@ -25,6 +25,12 @@ body
   margin-right: auto
   margin-left: auto
 
+@for $i from 1 through 12
+  .col-xll-#{$i}
+    +xlmin
+      flex: 0 0 percentage($i/12)
+      max-width: percentage($i/12)
+
 .logo
   display: inline-block
   font-size: 0

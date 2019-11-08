@@ -3,37 +3,7 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-xl-2 col-lg-3">
-        <div class="section__aside-toggle">
-          <button class="burger burger--arrow js-burger" data-menu-target="aside"></button>
-        </div>
-        <div class="section__aside js-sticky-polyfill js-menu" data-menu="aside">
-          <!-- begin aside -->
-          <aside class="aside">
-            <div class="aside__title">
-              <h5 class="title title--h5">ПЕРЕОБОРУДОВАНИЕ АВТОМОБИЛЕЙ:</h5>
-            </div>
-
-            <div class="aside__nav">
-              {{ mixins.list(
-                name = 'aside-nav',
-                modifications = { wrap: '', item: '', link: '' },
-                list = [
-                  { link: 'Volkswagen' },
-                  { link: 'Mercedes', modLink: 'is-active' },
-                  { link: 'Renault' },
-                  { link: 'Ford' },
-                  { link: 'Fiat' },
-                  { link: 'Opel' },
-                  { link: 'Citroen' },
-                  { link: 'Iveco' }
-                ]
-              ) }}
-            </div>
-          </aside>
-          <!-- end aside -->
-        </div>
-      </div>
+      {% include "partials/_aside.html" %}
 
       <div class="col-xl-10 col-lg-9">
         <div class="row">

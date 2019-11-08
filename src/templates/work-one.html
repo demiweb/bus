@@ -18,19 +18,33 @@ sectionGallery: {
   title: {
     hidden: true
   },
-  mod: 'pb-0',
-  services: true
+  mod: 'pb-0 pt-0',
+  services: true,
+  container: { hidden: true }
 }
 sectionAboutText: {
-  pb: true
+  container: { hidden: true }
 }
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
   {% include "partials/_hero.html" %}
-  {% include "partials/sections/_s-gallery.html" %}
-  {% include "partials/sections/_s-about-text.html" %}  
+  <!-- begin section -->
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        {% include "partials/_aside.html" %}
+
+        <div class="col-xl-10 col-lg-9">
+          {% include "partials/sections/_s-gallery.html" %}
+          {% include "partials/sections/_s-about-text.html" %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+    
   {% include "partials/sections/_s-call.html" %}
   {% include "partials/sections/_s-works-other.html" %}
 {% endblock %}

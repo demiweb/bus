@@ -1,7 +1,9 @@
 {% if page === 'work-one' %}
 <!-- begin section -->
 <section class="section{% if sectionAboutText.mod %} {{ sectionAboutText.mod }}{% elseif not sectionAboutText.pb %} pb-0{% endif %}">
+  {% if not sectionAboutText.container.hidden %}
   <div class="container">
+  {% endif %}
     {% if not sectionAboutText.title.hidden %}
     <div class="section__title">
       <h2 class="title title--h2">Описание <span class="accent">проекта</span></h2>
@@ -19,7 +21,9 @@
 
     </div>
     <!-- end article -->
+  {% if not sectionAboutText.container.hidden %}
   </div>
+  {% endif %}
 </section>
 <!-- end section -->
 {% else %}
