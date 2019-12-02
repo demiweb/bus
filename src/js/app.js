@@ -15,6 +15,7 @@ import setGallery from './components/setGallery';
 import setAccordion from './components/setAccordion';
 import setPopups from './components/setPopups';
 import fixHeader from './components/fixHeader';
+import toggleDropdown from './components/toggleDropdown';
 
 document.addEventListener('DOMContentLoaded', () => {
   sayHello();
@@ -31,4 +32,5 @@ document.addEventListener('DOMContentLoaded', () => {
   setAccordion();
   setPopups();
   fixHeader();
+  toggleDropdown();
 });

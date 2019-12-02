@@ -11,6 +11,10 @@
     +hover
       > ul
         +visible
+      > a
+        border-bottom-color: $white
+        background-color: transparent
+        color: $gray-light
     +lg
       margin-left: 0
       margin-right: 0
@@ -25,13 +29,21 @@
       // transform: translate(-50%, 0)
       top: 100%
       text-align: left
-      padding-top: 15px
-      padding-bottom: 15px
+      // padding-top: 15px
+      // padding-bottom: 15px
       width: 300px
+      max-height: 0
+      overflow: hidden
       +ready
-        +tr(visibility .3s, opacity .3s)
+        +tr(visibility .3s, opacity .3s, max-height .3s, margin .3s)
+      &.is-open
+        margin-top: 15px
+        margin-bottom: 15px
       +lgmin
         +hidden
+        max-height: none
+        padding-top: 15px
+        padding-bottom: 15px
       +lg
         position: static
         width: auto
@@ -50,21 +62,23 @@
         padding-right: 15px
         +hover
           border-bottom-color: transparent
+    &.current, &.active
+      > a
+        background-color: $accent
   a
     +flex(center, center)
-    padding-top: .5em
-    padding-bottom: .5em
+    padding: .5em
     border-bottom: 4px solid transparent
     height: $header-bottom-height
     +tr(color .3s, border-color .3s)
     +xll
       height: $header-bottom-height-xll
-    +hover
-      border-bottom-color: $white
-      color: $gray-light
+    // +hover
+    //   border-bottom-color: $white
+    //   color: $gray-light
     +lg
       display: inline
-      padding: 0
+      // padding: 0
       border: 0
     &.is-active
       border-bottom-color: $white
