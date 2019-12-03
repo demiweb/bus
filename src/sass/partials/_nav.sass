@@ -65,6 +65,14 @@
     &.current, &.active
       > a
         background-color: $accent
+    &.parent
+      > a
+        +after
+          +icon-arrow(10, 10, 1, currentColor, -45)
+          display: inline-block
+          margin-left: .7em
+          position: relative
+          top: -.2em
   a
     +flex(center, center)
     padding: .5em
