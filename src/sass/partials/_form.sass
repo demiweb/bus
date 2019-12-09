@@ -1,4 +1,5 @@
 .form
+  $this: &
   &:not(.form--call)
     background-color: $white
     padding: 60px
@@ -26,12 +27,22 @@
       margin-bottom: 25px
       +md
         margin-bottom: 15px
+  &__rating
+    +flex(flex-start, center)
+    padding-top: 20px
+    padding-bottom: 20px
+    padding-left: em(15)
+    > label
+      display: block
+      margin-right: .5em
   &__row
     +flex(flex-start, normal, row, wrap)
   &__btn
     max-width: 300px
     margin-left: auto
     margin-right: auto
+    +xs
+      max-width: none
   
   &--call
     .input
@@ -46,9 +57,29 @@
       +sm
         min-width: 0
         width: 100%
+  &--rating
+    box-shadow: none !important
+    background-color: transparent !important
+    text-align: left
+    padding: 0 !important
+    &__wrap
+      background-color: $gray-lightest
+      padding: 40px
+      +lg
+        padding: 30px
+      +md
+        padding: 20px
+    #{$this}__field
+      +notlast
+        margin-bottom: 5px
+        +md
+          margin-bottom: 5px
+    #{$this}__btn
+      margin-left: 0
+      margin-right: 0
 
-.input
-  input
+.input, .textarea
+  input, textarea
     width: 100%
     background-color: transparent
     border-bottom: 1px solid  $gray-light
@@ -59,13 +90,28 @@
       border-color: $accent
     +placeholder
       color: $gray-light
+  textarea
+    height: auto
+    min-height: 100px
 
   &--white
-    input
+    input, textarea
       background-color: $white
       border: 1px solid $white
       padding: .8em 1.5em
       height: 51px
+  &--border
+    input, textarea
+      border: 1px solid  $gray-light
+      height: em(50)
+      padding: em(13) em(15)
+      background-color: $white
+    textarea
+      height: auto
+      min-height: 100px
+
+.textarea
+  display: flex
 
 .checkbox
   position: relative

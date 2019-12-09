@@ -1,0 +1,24 @@
+---
+title: testimonials
+page: testimonials
+hero: {
+  bg: 'bg-hero-testimonials.jpg',
+  title: 'Отзывы о переоборудовании микроавтобусов',
+  breadcrumbs: {
+    list: [
+      { link: 'Главная' },
+      { item: '-' },
+      { link: 'Новости', modLink: 'is-active' },
+      { item: '-' },
+      { link: 'Все ли микроавтобусы можно переоборудовать?', modLink: 'is-active' }
+    ]
+  }
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-testimonials.html" %}
+  {% include "partials/sections/_s-testimonials-sm.html" %}
+{% endblock %}

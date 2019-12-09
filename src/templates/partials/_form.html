@@ -1,5 +1,5 @@
 <!-- begin form -->
-<div class="form">
+<div class="form{% if form.mod %} {{ form.mod }}{% endif %}">
   <form>
     {% if form.title %}
     <div class="form__title">
@@ -21,6 +21,13 @@
       ) }}
     </div>
     {% endfor %}
+
+    {% if form.rating %}
+    <div class="form__field form__rating">
+      <label>Оцените качество работ:</label>
+      {{ mixins.rating() }}
+    </div>
+    {% endif %}
 
     <div class="form__field form__btn">
       {{ mixins.btn(

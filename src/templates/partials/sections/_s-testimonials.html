@@ -1,0 +1,75 @@
+{%set
+aside = {
+  colMod: 'col-xl-3 col-lg-3'
+}
+%}
+
+{%set
+form = {
+  mod: 'form--rating',
+  rating: true,
+  fields: [
+    {
+      name: 'input',
+      mod: 'input--border',
+      type: 'text',
+      placeholder: 'ФИО:',
+      fieldClass: '',
+      label: {}
+    },
+    {
+      name: 'textarea',
+      mod: 'textarea--border',
+      type: '',
+      placeholder: 'Ваш отзыв:',
+      fieldClass: '',
+      label: {}
+    },
+    {
+      name: 'input',
+      mod: 'input--border',
+      type: 'text',
+      placeholder: 'Город:',
+      fieldClass: '',
+      label: {}
+    },
+    {
+      name: 'input',
+      mod: 'input--border',
+      type: 'text',
+      placeholder: 'Вид работ:',
+      fieldClass: '',
+      label: {}
+    }
+  ]
+}
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      {% include "partials/_aside.html" %}
+
+      <div class="col-xl-9 col-lg-9">
+        <div class="section__block">
+          {% for i in range(0, 10) %}
+          {% include "partials/_testimonial.html" %}
+          {% endfor %}
+        </div>
+
+        <div class="section__block">
+          <div class="section__title text-left">
+            <h2 class="title title--h2">делали у нас работы? <div class="accent">оставьте свой отзыв</div></h2>
+          </div>
+          
+          <div class="form__wrap form--rating__wrap">
+            {% include "partials/_form.html" %}
+          </div>
+        </div>  
+      </div>
+    </div>
+    
+  </div>
+</section>
+<!-- end section -->

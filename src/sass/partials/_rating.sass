@@ -1,0 +1,30 @@
+.rating
+  $this: &
+  position: relative
+  display: flex
+  justify-content: flex-start
+  flex-direction: row-reverse
+  input    
+    visibility: hidden
+    opacity: 0
+    position: absolute
+  label
+    color: #ffa500
+    font-size: 0
+    opacity: .3    
+    +tr(opacity .3s)
+    +notfirst
+      margin-right: 3px
+    .icon
+      font-size: 21px
+    &.is-active
+      opacity: 1
+  &:not(#{$this}--static)
+    label
+      cursor: pointer
+    > input:checked ~ label,
+    > label:hover,
+    > label:hover ~ label
+      opacity: 1
+
+  &--static

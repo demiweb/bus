@@ -40,7 +40,7 @@
       display: block
   &__aside
     position: sticky
-    top: 30px
+    top: $header-bottom-height
     +md
       position: fixed
       top: 0
@@ -59,6 +59,11 @@
         +visible
         .aside
           transform: translate(0, 0)
+  &__block
+    +notlast
+      margin-bottom: 35px
+      +md
+        margin-bottom: 25px
 
 
   &--sm

@@ -1,0 +1,37 @@
+<!-- begin testimonial -->
+<div class="testimonial">
+  <div class="testimonial__top">
+    <div class="testimonials__rating">
+      {{ mixins.rating(static = true, mod = 'rating--static') }}
+    </div>
+    <div class="testimonial__date">
+      <div class="meta">
+        <div class="meta__item">
+          {{ mixins.icon('calendar') }}
+                      25.07.2019
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial__title">
+    <h3 class="title title--h3 title--ttn title--bold">Александра Игоревна</h3>
+  </div>
+
+  <div class="testimonial__text">
+    <p>Делал здесь перетяжку салона своего Viano. Раньше был оригинальный салон, обтянутый тканью. Теперь супер салон из алькантары и кожзама! Сделали очень аккуратно, на совесть. Цена, по сравнению с другими, не кусается. Рекомендую.</p>
+  </div>
+
+  <div class="testimonial__meta">
+    {{ mixins.list(
+      name = 'descr-list',
+      modifications = { wrap: '', item: '', link: '' },
+      descr = true,
+      list = [
+        { dt: 'Город: ', dd: 'Бердичев' },
+        { dt: 'Вид работ: ', dd: 'перетяжка салона для мерседес вито' }
+      ]
+    ) }}
+  </div>
+</div>
+<!-- end testimonial -->

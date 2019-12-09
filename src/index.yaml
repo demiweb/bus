@@ -11,3 +11,4 @@ PageList:
 - file: blog-page.html
 - file: contacts.html
 - file: popup-thanks.html
+- file: testimonials.html

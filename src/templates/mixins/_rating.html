@@ -1,0 +1,52 @@
+{% from 'mixins/_icon.html' import icon %}
+{% set icon = icon %}
+
+{% macro rating(static, mod) %}
+<!-- begin rating -->
+{# <div class="rating__wrap"> #}
+  {# <div class="rating__title">Ваша оцінка:</div> #}
+  <div class="rating{% if mod %} {{ mod }}{% endif %}">
+    {% if not static %}
+    <input type="radio" id="star5" name="rating" value="5">
+    <label class="" for="star5">
+      {{ icon('star-circle') }}
+    </label>
+    <input type="radio" id="star4" name="rating" value="4">
+    <label class="" for="star4">
+      {{ icon('star-circle') }}
+    </label>
+    <input type="radio" id="star3" name="rating" value="3">
+    <label class="" for="star3">
+      {{ icon('star-circle') }}
+    </label>
+    <input type="radio" id="star2" name="rating" value="2">
+    <label class="" for="star2">
+      {{ icon('star-circle') }}
+    </label>
+    <input type="radio" id="star1" name="rating" value="1">
+    <label class="" for="star1">
+      {{ icon('star-circle') }}
+    </label>
+
+    {% else %}
+
+    <label class="is-active" for="">
+      {{ icon('star-circle') }}
+    </label>
+    <label class="is-active" for="">
+      {{ icon('star-circle') }}
+    </label>
+    <label class="is-active" for="">
+      {{ icon('star-circle') }}
+    </label>
+    <label class="is-active" for="">
+      {{ icon('star-circle') }}
+    </label>
+    <label class="is-active" for="">
+      {{ icon('star-circle') }}
+    </label>
+    {% endif %}
+  </div>
+{# </div> #}
+<!-- end rating -->
+{% endmacro %}
