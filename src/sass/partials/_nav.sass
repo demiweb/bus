@@ -10,11 +10,15 @@
     position: relative
     +hover
       > ul
-        +visible
+        // +visible
+        display: block
       > a
         border-bottom-color: $white
         background-color: transparent
         color: $gray-light
+    +xl
+      margin-left: 25px
+      margin-right: 25px
     +lg
       margin-left: 0
       margin-right: 0
@@ -32,15 +36,18 @@
       // padding-top: 15px
       // padding-bottom: 15px
       width: 300px
-      max-height: 0
-      overflow: hidden
+      // max-height: 0
+      // overflow: hidden
+      display: none
       +ready
         +tr(visibility .3s, opacity .3s, max-height .3s, margin .3s)
       &.is-open
         margin-top: 15px
         margin-bottom: 15px
+        display: block
       +lgmin
-        +hidden
+        // +hidden
+        display: none
         max-height: none
         padding-top: 15px
         padding-bottom: 15px
@@ -52,9 +59,12 @@
         font-size: .8em
         padding-bottom: 0
       li
-        margin-left: 0
-        margin-right: 0
+        margin-left: 0 !important
+        margin-right: 0 !important
         display: block
+        > ul
+          left: 100%
+          top: 0
       a
         height: auto
         justify-content: flex-start
@@ -68,7 +78,7 @@
     &.parent
       > a
         +after
-          +icon-arrow(10, 10, 1, currentColor, -45)
+          +icon-arrow(.7, .7, .05, currentColor, -45, em)
           display: inline-block
           margin-left: .7em
           position: relative
@@ -99,8 +109,8 @@
     font-size: 1em
     li
       display: block
-      margin-left: 0
-      margin-right: 0
+      margin-left: 0 !important
+      margin-right: 0 !important
       +notlast
         margin-bottom: 15px
         +md

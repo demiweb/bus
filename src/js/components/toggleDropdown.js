@@ -26,10 +26,10 @@ export default () => {
 
     if (subMenu.classList.contains(IS_OPEN)) {
       subMenu.classList.remove(IS_OPEN);
-      subMenu.style.maxHeight = '';
+      // subMenu.style.maxHeight = '';
     } else {
       subMenu.classList.add(IS_OPEN);
-      subMenu.style.maxHeight = `${subMenu.scrollHeight}px`;
+      // subMenu.style.maxHeight = `${subMenu.scrollHeight}px`;
     }
   }
   document.addEventListener('click', toggleDropdown);
