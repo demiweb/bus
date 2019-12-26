@@ -62,6 +62,7 @@
     #{$this}__inner
       height: $header-bottom-height
       justify-content: center
+      flex-wrap: nowrap
       +xll
         height: $header-bottom-height-xll
       +lg
@@ -93,8 +94,11 @@
     +xs
       padding-right: 0
   &__btn
-    @extend .col-4
+    // @extend .col-4
     text-align: center
+    max-width: 17%
+    .btn
+      min-width: 0
     +lg
       display: none
   &__btn-mob
@@ -102,7 +106,7 @@
     +lg
       display: block
   &__work-hrs
-    @extend .col-1
+    @extend .col-2
     +lg
       display: none
   &__nav
@@ -155,9 +159,13 @@
 
 .work-hrs
   font-size: $fz-xs
+  +flex(flex-start, center)
   &__icon
+    margin-right: .3em
     .icon
       font-size: 1.3em
+  &__content
+    +flex(flex-start, center)
 
 .burger 
   display: inline-block
